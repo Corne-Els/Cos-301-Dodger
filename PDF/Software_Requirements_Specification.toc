@@ -13,7 +13,8 @@
 \contentsline {section}{\numberline {3}Specific Requirements}{1}
 \contentsline {subsection}{\numberline {3.1}External Interface Requirements}{1}
 \contentsline {subsection}{\numberline {3.2}Functional Requirements}{1}
-\contentsline {subsection}{\numberline {3.3}Performance Requirements}{1}
-\contentsline {subsection}{\numberline {3.4}Design Constraints}{1}
-\contentsline {subsection}{\numberline {3.5}Software System Attributes}{1}
-\contentsline {subsection}{\numberline {3.6}Other Requirements}{1}
+\contentsline {subsubsection}{\numberline {3.2.1}Use cases}{1}
+\contentsline {subsection}{\numberline {3.3}Performance Requirements}{4}
+\contentsline {subsection}{\numberline {3.4}Design Constraints}{4}
+\contentsline {subsection}{\numberline {3.5}Software System Attributes}{4}
+\contentsline {subsection}{\numberline {3.6}Other Requirements}{4}
