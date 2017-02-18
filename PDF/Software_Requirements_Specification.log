@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.13)  18 FEB 2017 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.13)  18 FEB 2017 16:11
 entering extended mode
 **./Software_Requirements_Specification.tex
 (Software_Requirements_Specification.tex
@@ -190,25 +190,47 @@ File: Figures/Navigation_Subsystem.png Graphic file (type png)
 Package pdftex.def Info: Figures/Navigation_Subsystem.png used on input line 93
 .
 (pdftex.def)             Requested size: 250.93687pt x 255.95563pt.
- [3 <./Figures/Navigation_Subsystem.png>] [4] (Software_Requirements_Specificat
-ion.aux) ) 
+ [3 <./Figures/Navigation_Subsystem.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+<Figures/Entertainment_Subsystem.png, id=25, 461.725pt x 301.125pt>
+File: Figures/Entertainment_Subsystem.png Graphic file (type png)
+
+<use Figures/Entertainment_Subsystem.png>
+Package pdftex.def Info: Figures/Entertainment_Subsystem.png used on input line
+ 126.
+(pdftex.def)             Requested size: 230.86194pt x 150.56212pt.
+ [4 <./Figures/Entertainment_Subsystem.png>] [5] (Software_Requirements_Specifi
+cation.aux) ) 
 Here is how much of TeX's memory you used:
- 1499 strings out of 493333
- 21536 string characters out of 3139197
+ 1504 strings out of 493333
+ 21722 string characters out of 3139197
  82443 words of memory out of 3000000
- 5035 multiletter control sequences out of 15000+200000
+ 5039 multiletter control sequences out of 15000+200000
  7895 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,6n,25p,364b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on Software_Requirements_Specification.pdf (6 pages, 113524 byte
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Software_Requirements_Specification.pdf (7 pages, 127652 byte
 s).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 51 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

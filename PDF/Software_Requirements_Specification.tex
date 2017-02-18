@@ -89,15 +89,43 @@
 			\item \textbf{Postcondition:} A heatmap of the campus is displayed. 
 		\end{enumerate}
 	\end{enumerate}
-		\begin{figure}[h!]
+	\begin{figure}[h!]
 		\includegraphics[scale=0.5]{Navigation_Subsystem.png}
 		\caption{Navigation Subsystem}	
 	\end{figure}
+	
+	
 	\item \underline{Location Management Subsystem}
 	\item \underline{User Account Management Subsystem}
 	
+	
 	\item \underline{Entertainment Subsystem}
-
+			\begin{enumerate}
+		\item View events
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must enable users to view all events that are happening around campus in chronological order. The system should suggest events to a user based on their preferences and most visited locations.
+			\item \textbf{Precondition:} The user must have an active account and must be logged in.
+			\item \textbf{Postcondition:} Various campus-wide events are returned to the user.\newline
+		\end{enumerate}
+		
+		\item Save event
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must enable users to save events that they are interested so that they can be viewed later.
+			\item \textbf{Precondition:} The user must have an active account, must be logged in and there must be events available to save.
+			\item \textbf{Postcondition:} An event is saved.\newline
+		\end{enumerate}
+		
+		\item Delete event
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must enable a user to delete any saved events
+			\item \textbf{Precondition:} The user must have an active account, must be logged in and must have saved events
+			\item \textbf{Postcondition:} A saved event is deleted .\newline
+		\end{enumerate}
+	\end{enumerate}
+	\begin{figure}[h!]
+		\includegraphics[scale=0.5]{Entertainment_Subsystem.png}
+		\caption{Navigation Subsystem}	
+	\end{figure}	
 	
 	\item \underline{Achievements Subsystem}
 	\item \underline{Administration Subsystem}
