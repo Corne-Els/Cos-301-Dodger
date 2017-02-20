@@ -1,10 +1,16 @@
 \documentclass{article}
+\usepackage{enumitem}
+
+\newlist{FR}{enumerate}{1}
+\setlist[FR]{label=FR-\arabic*:}
+
 
 \renewcommand{\labelenumii}{\theenumii}
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
 
 \usepackage{graphicx}
 \graphicspath{{Figures/}}
+
 
 \title{Software Requirements Specification}
 \date{24 February 2017}
@@ -30,13 +36,21 @@
 	\subsection{Product Function}
 	\subsection{User Characteristics}
 	\subsection{Constraints}
+	This section describes restrictions on the options that are available when developing the application within feasable regions
+		\begin{itemize}
+			\item Connections are limited to different types of networks at different locations. GPS cannot be used within buildings and some buildings lack a strong Wi-Fi signal. Mobile networks may also switch to EDGE in some buildings where faster connections aren't available.
+			\item Application is initially constrained to Android and iOS only.
+			\item Application is designed for approximately 30000 users at any given time which can be seen as a constraint on the number of active users the system can handle.
+			\item The application can experience lengthy response times given that there is a constraint resulting from the capacity of the databases.\newline
+		\end{itemize}
+	
 	\subsection{Assumptions and Dependencies}
 	
 	\section{Specific Requirements}
 	This section expands on the functional requirements of the system. It gives a detailed 	description of the system and all of its use cases.
 	
 	\subsection{External Interface Requirements}
-	
+	Not relevant
 	\subsection{Functional Requirements}
 	This section includes all functional requirements in detail. It includes all use case diagrams, Actor-System interaction diagrams as well as a traceability matrix.	
 	
@@ -138,17 +152,17 @@
 	\subsection{Design Constraints}
 	This section describes restrictions on design alternatives regarding standards and limitations of hardware capabilities
 	\begin{enumerate}
-		\item \textbf{Storage space}
-		\begin{itemize}
-			\item \textbf{Description:} The amount of storage space required by the application must be within the maximum storage limits of a budget phone to accomodate a range of phones typically used by students.
+		\item \textbf{Storage space}\newline
+			 \textbf{Description:} The amount of storage space required by the application must be within the maximum storage limits of a budget phone to accomodate a range of phones typically used by students.
+			\begin{itemize}
 			\item \textbf{Maximum:} 90MB
 			\item \textbf{Reasonable:} 40MB
 			\item \textbf{Optimal:} 10MB.\newline
 		\end{itemize}
 	
-		\item \textbf{Memory usage}
-		\begin{itemize}
-			\item \textbf{Description:} The amount of RAM used by the application should be a reasonable amount considering that some smartphones only have a capacity of 1GB RAM
+		\item \textbf{Memory usage}\newline
+			\textbf{Description:} The amount of RAM used by the application should be a reasonable amount considering that some smartphones only have a capacity of 1GB RAM
+			\begin{itemize}
 			\item \textbf{Maximum:} 150MB
 			\item \textbf{Reasonable:} 90MB
 			\item \textbf{Optimal:} 40MB.\newline
@@ -156,7 +170,9 @@
 	\end{enumerate}
 	
 	\subsection{Software System Attributes}
+	Not relevant
 	\subsection{Other Requirements}
+	Not relevant
 
 \end{document}\grid
 \grid
