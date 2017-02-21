@@ -19,18 +19,31 @@
 	\pagenumbering{arabic}
 	
 	\section{Introduction}
+	The software requirements specification (SRS) should aptly outline the functional requirements of the system to ensure that a third party could develop the functionality to a required degree without further input. Thus, the functional requirements should be precise and extensive to eliminate deviation from the system’s goals.
+	
 	\subsection{Purpose}
+	The intended audience of the application includes students of the University of Pretoria, the staff and simple visitors. NavUP can be used by new students who do not know their way around campuses yet, or simply by staff members who want to avoid clustered pathways. It is a tool that will help optimise campus navigation and reduce travel time from one destination to the other.
+	
 	\subsection{Scope}
+	The NavUP system will help users to navigate campuses by allowing users to choose destinations, locate their current location, set up the appropriate path by taking into account human congestion and visually representing said path for the user to follow.
+	NavUP will have a notifications system that will tell the user of events he/she might be interested in. An achievements system will also be in place to award users for walking certain distances or visiting certain locations.  NavUP also hopes to incorporate locations with access for the disabled into its maps for those that are in need of such features. It will have a timetable feature that will allow users to create personalised timetables which the system could then use to help them get where they need to when they need to. The system will work offline but will lose some of its online features such as notifications for user interests. Users will also be able to broadcast their location so that others can see them on their maps.
+	
 	\subsection{Definitions, Acronyms and Abbreviations}
+	
+	\begin{figure}[h!]
+		\includegraphics[scale=1]{Descriptions.PNG}
+	\end{figure}
+	
 	\subsection{References}
 	\subsection{Overview}
+	The SRS will help give a detailed representation of the functional requirements and how the elements of the system interact with eachother to achieve NavUp's purpose. 
 	
 	\section{Overall Description}
 	\subsection{Product Perspective}
-The main system will be a server on campus that is connected to a database where user's details are stored such as degree, interests and timetable. The user will log into the main system by means of a user friendly GUI provided on the mobile application that sends the user's details to the server over the internet to look at the authenticity and correctness of the provided details. Thereafter the main system will load information about the user and populate the GUI with the relevant information based on the category of the current user be it a student or administrator. The application will then use wifi connections, cell phone towers and GPS to determine the user's position and then triangulate them to the destination class or activity based on these calculations. When administrators update the application or database through the server or the application itself it will notify the user and update the relevant information for the user, for example if a class is cancelled, it will update the user's timetable and notify the user of this update through the GUI as well as push notifications. The map of campus can be loaded onto the mobile application to reduce long term internet usage and only the destination and route to get there will be sent over the network.
 
+	The main system will be a server on campus that is connected to a database where user's details are stored such as degree, interests and timetable. The user will log into the main system by means of a user friendly GUI provided on the mobile application that sends the user's details to the server over the internet to look at the authenticity and correctness of the provided details. Thereafter the main system will load information about the user and populate the GUI with the relevant information based on the category of the current user be it a student or administrator. The application will then use wifi connections, cell phone towers and GPS to determine the user's position and then triangulate them to the destination class or activity based on these calculations. When administrators update the application or database through the server or the application itself it will notify the user and update the relevant information for the user, for example if a class is cancelled, it will update the user's timetable and notify the user of this update through the GUI as well as push notifications. The map of campus can be loaded onto the mobile application to reduce long term internet usage and only the destination and route to get there will be sent over the network.
 	\subsection{Product Function}
-	\begin{itemize}
+		\begin{itemize}
 	\item Navigation from and to a location
 	\item Store users timetable to automatically tell user where to go next
 	\item View more information about a specific location
@@ -39,7 +52,17 @@ The main system will be a server on campus that is connected to a database where
 	\item Update user timetables if classes are cancelled or if there will be a test
 	\end{itemize}
 	\subsection{User Characteristics}
-	Four categories of users will be present:
+		Four categories of users will be present:
+		\begin{itemize}
+
+\item Guest user: Basic education level is needed as this user will just be making use of the navigation system and search system so a basic technical skill will be needed.
+\item Main user (student): This user has at least a high school level education and will be using more advanced parts of the system such as setting up a class timetable, looking at and competing in the reward system and managing their profile.
+\item Administrator / lecturer: This user has at least a high school level education and will need a more advanced technical knowledge as this user will be setting up events, cancelling classes and fixing or updating the system for other users.  
+\item 3rd party Rewards manager: High school level education will be needed as more advanced tasks will be left up to this user such as set up challenges for the other users and include rewards if challenge is completed. An advanced technical knowledge will be needed by this user.
+
+	\end{itemize}
+	\subsection{Constraints}
+	This section describes restrictions on the options that are available when developing the application within feasable regions.
 		\begin{itemize}
 
 \item Guest user: Basic education level is needed as this user will just be making use of the navigation system and search system so a basic technical skill will be needed.
@@ -50,6 +73,7 @@ The main system will be a server on campus that is connected to a database where
 	\end{itemize}
 	\subsection{Constraints}
 	\subsection{Assumptions and Dependencies}
+		A major assumption of the NavUP system is related to mobile devices. The first assumption relating to this includes the idea that those who require the services rendered by the application will either have a mobile device or have access to one and have a general knowledge of how to use it. It is also assumed that every users mobile device will have enough memory and performance capabilities in order to run the application. Lastly, it is assumed that these devices will have GPS, WiFi and cellular connectivity capabilities built into the device.
 	
 	\section{Specific Requirements}
 	This section expands on the functional requirements of the system. It gives a detailed 	description of the system and all of its use cases.
@@ -214,6 +238,5 @@ The main system will be a server on campus that is connected to a database where
 	
 	\subsection{Software System Attributes}
 	\subsection{Other Requirements}
-
-\end{document}\grid
-\grid
+	Not relevant
+\end{document}
