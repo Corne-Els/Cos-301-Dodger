@@ -106,6 +106,45 @@
 		\includegraphics[scale=0.5]{Navigation_Subsystem.png}
 		\caption{Navigation Subsystem}	
 	\end{figure}
+	\begin{table}[h!]
+\centering
+\caption{Navigation Subsystem Traceability Matrix}
+\label{my-label}
+\begin{tabular}{cc|c|c|c|c|c|c|}
+\cline{3-8}
+                                           &                   & \multicolumn{6}{c|}{\textbf{Use Cases}} \\ \hline
+\multicolumn{1}{|c|}{\textbf{Requirement}} & \textbf{Priority} & 1.1  & 1.2  & 1.3  & 1.4  & 1.5  & 1.6  \\ \hline
+\multicolumn{1}{|c|}{FR-1}                 & 1                 & X    & X    &      &      & X    & X    \\ \hline
+\multicolumn{1}{|c|}{FR-2}                 & 5                 &      &      &      &      &      & X    \\ \hline
+\multicolumn{1}{|c|}{FR-3}                 & 7                 & X    & X    &      &      &      &      \\ \hline
+\multicolumn{1}{|c|}{FR-4}                 & 8                 & X    &      &      &      & X    &      \\ \hline
+\multicolumn{1}{|c|}{FR-5}                 & 2                 &      &      &      &      &      &      \\ \hline
+\multicolumn{1}{|c|}{FR-6}                 & 4                 &      &      &      &      &      &      \\ \hline
+\multicolumn{1}{|c|}{FR-7}                 & 3                 &      & X    &      &      &      &      \\ \hline
+\multicolumn{1}{|c|}{FR-8}                 & 6                 &      & X    &      & X    &      &      \\ \hline
+\multicolumn{2}{|c|}{\textbf{Use Case Priority}}               & 1    & 3    & 4    & 6    & 2    & 5    \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{Location Management Subsystem Traceability Matrix}
+\label{my-label}
+\begin{tabular}{cc|c|c|c|c|c|}
+\cline{3-7}
+                                           &                   & \multicolumn{5}{c|}{\textbf{Use Cases}} \\ \hline
+\multicolumn{1}{|c|}{\textbf{Requirement}} & \textbf{Priority} & 2.1    & 2.2    & 2.3   & 2.4   & 2.5   \\ \hline
+\multicolumn{1}{|c|}{FR-1}                 & 1                 &        & X      & X     &       & X     \\ \hline
+\multicolumn{1}{|c|}{FR-2}                 & 5                 &        &        &       &       &       \\ \hline
+\multicolumn{1}{|c|}{FR-3}                 & 7                 & X      &        &       &       & X     \\ \hline
+\multicolumn{1}{|c|}{FR-4}                 & 8                 &        &        &       & X     &       \\ \hline
+\multicolumn{1}{|c|}{FR-5}                 & 2                 &        &        &       &       &       \\ \hline
+\multicolumn{1}{|c|}{FR-6}                 & 4                 &        &        &       &       &       \\ \hline
+\multicolumn{1}{|c|}{FR-7}                 & 3                 & X      & X      &       & X     &       \\ \hline
+\multicolumn{1}{|c|}{FR-8}                 & 6                 &        &        & X     &       &       \\ \hline
+\multicolumn{2}{|c|}{\textbf{Use Case Priority}}               & 1      & 4      & 5     & 2     & 3     \\ \hline
+\end{tabular}
+\end{table}
 	
 	
 	\item \underline{Location Management Subsystem}
@@ -146,8 +185,29 @@
 	
 	
 	\subsection{Performance Requirements}
+	Not relevant
+	
 	\subsection{Design Constraints}
+	This section describes restrictions on design alternatives regarding standards and limitations of hardware capabilities
+	\begin{enumerate}
+		\item \textbf{Storage space}
+		\begin{itemize}
+			\item \textbf{Description:} The amount of storage space required by the application must be within the maximum storage limits of a budget phone to accomodate a range of phones typically used by students.
+			\item \textbf{Maximum:} 90MB
+			\item \textbf{Reasonable:} 40MB
+			\item \textbf{Optimal:} 10MB.\newline
+		\end{itemize}
+	
+		\item \textbf{Memory usage}
+		\begin{itemize}
+			\item \textbf{Description:} The amount of RAM used by the application should be a reasonable amount considering that some smartphones only have a capacity of 1GB RAM
+			\item \textbf{Maximum:} 150MB
+			\item \textbf{Reasonable:} 90MB
+			\item \textbf{Optimal:} 40MB.\newline
+		\end{itemize}
+	\end{enumerate}
+	
 	\subsection{Software System Attributes}
 	\subsection{Other Requirements}
-
+  
 \end{document}
