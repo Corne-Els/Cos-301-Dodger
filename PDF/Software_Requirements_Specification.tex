@@ -210,9 +210,128 @@
 \end{tabular}
 \end{table}
 	
+\centering
+\caption{User Account Management Subsystem Traceability Matrix}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{}                           & \multicolumn{5}{c|}{\textbf{Use Cases}}                                  \\ \hline
+\textbf{Requirement}     & \textbf{Priority}     & \textbf{2.1} & \textbf{2.2} & \textbf{2.3} & \textbf{2.4} & \textbf{2.5} \\ \hline
+\textbf{FR-1}            & \textbf{1}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-2}            & \textbf{5}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-3}            & \textbf{7}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-4}            & \textbf{8}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-5}            & \textbf{2}            & \textbf{X}   & \textbf{X}   & \textbf{X}   & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-6}            & \textbf{4}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{X}   & \textbf{X}   \\ \hline
+\textbf{FR-7}            & \textbf{3}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-8}            & \textbf{6}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\multicolumn{2}{|c|}{\textbf{Use Case Priority}} & \textbf{1}   & \textbf{2}   & \textbf{3}   & \textbf{4}   & \textbf{5}   \\ \hline
+\end{tabular}
+\end{table}	
+
+\begin{table}[]
+\centering
+\caption{Entertainment Subsystem Traceability Matrix}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|c|l|l|}
+\hline
+\multicolumn{2}{|c|}{}                           & \multicolumn{5}{c|}{\textbf{Use Cases}}                           \\ \hline
+\textbf{Requirement}     & \textbf{Priority}     & \textbf{4.1}  & \textbf{4.2}  & \multicolumn{3}{c|}{\textbf{4.3}} \\ \hline
+\textbf{FR-1}            & \textbf{1}            & \textbf{X}    & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-2}            & \textbf{5}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-3}            & \textbf{7}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-4}            & \textbf{8}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-5}            & \textbf{2}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-6}            & \textbf{4}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-7}            & \textbf{3}            & \textbf{}     & \textbf{X}    & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-8}            & \textbf{6}            & \textbf{X}    & \textbf{X}    & \multicolumn{3}{c|}{\textbf{X}}   \\ \hline
+\multicolumn{2}{|c|}{\textbf{Use Case Priority}} & \textbf{1}    & \textbf{2}    & \multicolumn{3}{c|}{\textbf{3}}   \\ \hline
+\end{tabular}
+\end{table}
 	
 	\item \underline{Location Management Subsystem}
+\begin{enumerate}
+		\item Save Location
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must be able to save a location that the user specifies. 
+			\item \textbf{Precondition:} User must be logged in if they want to save locations, and be in range of WiFi.
+			\item \textbf{Postcondition:} A location will be saved to the users profile.\newline
+		\end{enumerate}
+		
+		\item View Saved Location 
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must allow users to view locations that the user has saved to their profile. 
+			\item \textbf{Precondition:} The user must be logged in and be in range of WiFi.
+			\item \textbf{Postcondition:} None.\newline
+		\end{enumerate}
+		
+		\item View History 
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system should be able to allow users to view their history of locations.
+			\item \textbf{Precondition:} The user must be logged in and be in range of WiFi.
+			\item \textbf{Postcondition:} None.\newline
+		\end{enumerate}
+		
+		\item Share Location  
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system should provide the users with a means to share their current location so as to allow other users to know where they are. 
+			\item \textbf{Precondition:} The user must be logged in and be in range of WiFi.
+			\item \textbf{Postcondition:} User location is broadcasted for other users to see.\newline
+		\end{enumerate}
+		
+		\item View Most Visited Locations  
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system should have a favourite location section which can then be accessed by the user to view their most visited areas. 
+			\item \textbf{Precondition:} The user must be logged in and be in range of WiFi.
+			\item \textbf{Postcondition:} None.\newline
+		\end{enumerate}
+	\end{enumerate}
+	\begin{figure}[h!]
+		\includegraphics[scale=0.5]{Location_Management.JPG}
+		\caption{Location Management Subsystem}	
+	\end{figure}
+	
 	\item \underline{User Account Management Subsystem}
+	\begin{enumerate}
+		\item Create Profile
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must be able to provide the user with a means to create their profiles which will then allow them to login to the NavUP application. 
+			\item \textbf{Precondition:} User must be in range of WiFi.
+			\item \textbf{Postcondition:} A new user account is created.\newline
+		\end{enumerate}
+		
+		\item Login Function
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must allow users with a profile to be able to login to said profile and use the NavUP system to the fullest. 
+			\item \textbf{Precondition:} User must be in range of WiFi and have an existing NavUP account.
+			\item \textbf{Postcondition:} User is logged in.\newline
+		\end{enumerate}
+		
+		\item Manage Profile
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must allow users to manage their own profiles as well as allow administrators to keep track of user profiles. 
+			\item \textbf{Precondition:} User must be in range of WiFi and logged in. Admin has no precondition.  
+			\item \textbf{Postcondition:} User profile may be altererd.\newline
+		\end{enumerate}
+		
+		\item Create Timetable
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system should be able to allow users to create their personal timetables. 
+			\item \textbf{Precondition:} User must be in range of WiFi and logged in.
+			\item \textbf{Postcondition:} Timetable is created on user's profile.\newline
+		\end{enumerate}
+		
+		\item Manage Timetable
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must allow users to edit or manage their existing timetables so as to fit their needs. It must also allow administrators to keep track of the user’s timetable. 
+			\item \textbf{Precondition:} User must have existing timetable.
+			\item \textbf{Postcondition:} Timetable is edited on the users profile.\newline
+		\end{enumerate}
+	\end{enumerate}
+	\begin{figure}[h!]
+		\includegraphics[scale=0.5]{User_Account_Management.JPG}
+		\caption{User Account Management Subsystem}	
+	\end{figure}
 	
 	
 	\item \underline{Entertainment Subsystem}
