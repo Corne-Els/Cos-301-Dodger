@@ -1,16 +1,10 @@
 \documentclass{article}
-\usepackage{enumitem}
-
-\newlist{FR}{enumerate}{1}
-\setlist[FR]{label=FR-\arabic*:}
-
 
 \renewcommand{\labelenumii}{\theenumii}
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
 
 \usepackage{graphicx}
 \graphicspath{{Figures/}}
-
 
 \title{Software Requirements Specification}
 \date{24 February 2017}
@@ -49,58 +43,16 @@
 	\subsection{Product Function}
 	\subsection{User Characteristics}
 	\subsection{Constraints}
-	This section describes restrictions on the options that are available when developing the application within feasable regions.
-		\begin{itemize}
-			\item Connections are limited to different types of networks at different locations. GPS cannot be used within buildings and some buildings lack a strong Wi-Fi signal. Mobile networks may also switch to EDGE in some buildings where faster connections aren't available.
-			\item Application is initially constrained to Android and iOS only.
-			\item Application is designed for approximately 30000 users at any given time which can be seen as a constraint on the number of active users the system can handle.
-			\item The application can experience lengthy response times given that there is a constraint resulting from the capacity of the databases.\newline
-		\end{itemize}
-	
 	\subsection{Assumptions and Dependencies}
 	
 	\section{Specific Requirements}
 	This section expands on the functional requirements of the system. It gives a detailed 	description of the system and all of its use cases.
 	
 	\subsection{External Interface Requirements}
-	This section provides a detailed description for each interface that composes the system along with other relevant information.
-		\subsubsection{User Interface}
-		\begin{itemize}
-		\item The user interface should initially be a login screen for first time users or logged out users. This login screen will also have the option for new users to register.
-		\item Users should then be able to type in their preferred destination or search via an advanced search method to find a number of different places based on their search criteria.
-		\item A results page will be in the form of a visual map which can be used interactively by the user to view his/her route clearly or to view other places of interest along the way.
-		\item A settings page will be available for users to tweak the application to their needs as well as to update personal settings.\newline
-		\end{itemize}
-		
-		\subsubsection{Hardware Interface}
-		\begin{itemize}
-		\item Abstract interface via application and database infrastructure not visible to user.\newline
-		\end{itemize}
-		
-		\subsubsection{Software Interface}
-		\begin{itemize}
-		\item Application and GPS application communicate in order to receive geographical information. 			\item Application and database communicate in order to receive information about classes and desired locations.\newline
-		\end{itemize}
-		
-		\subsubsection{Communication Interface}
-		\begin{itemize}
-		\item No specific interface implemented. Communication is left to the underlying operating system of the application and portal/database.\newline
-		\end{itemize}
-		
 	
 	\subsection{Functional Requirements}
 	This section includes all functional requirements in detail. It includes all use case diagrams, Actor-System interaction diagrams as well as a traceability matrix.	
-	\subsubsection{High Level Requirements}
-	\begin{FR}
-		\item The system should have basic navigation functionality 
-		\item The system should be able to provide and visualise information related to pedestrian traffic
-		\item The system should be able to push new information to users based on their preferences and interests
-		\item The system should integrate various activities that use location and movement
-		\item The system should provide functionality to create, read, update and delete users 
-		\item The system should allow users to create and manage timetables
-		\item The system should allow users to save and share locations
-		\item The system should be able to allow users to manage events they are interested in on campus
-	\end{FR}
+	
 	\subsubsection{Use cases}
 	\begin{enumerate}
 		\item \underline{Navigation Subsystem}
@@ -154,6 +106,45 @@
 		\includegraphics[scale=0.5]{Navigation_Subsystem.png}
 		\caption{Navigation Subsystem}	
 	\end{figure}
+	\begin{table}[h!]
+\centering
+\caption{Navigation Subsystem Traceability Matrix}
+\label{my-label}
+\begin{tabular}{cc|c|c|c|c|c|c|}
+\cline{3-8}
+                                           &                   & \multicolumn{6}{c|}{\textbf{Use Cases}} \\ \hline
+\multicolumn{1}{|c|}{\textbf{Requirement}} & \textbf{Priority} & 1.1  & 1.2  & 1.3  & 1.4  & 1.5  & 1.6  \\ \hline
+\multicolumn{1}{|c|}{FR-1}                 & 1                 & X    & X    &      &      & X    & X    \\ \hline
+\multicolumn{1}{|c|}{FR-2}                 & 5                 &      &      &      &      &      & X    \\ \hline
+\multicolumn{1}{|c|}{FR-3}                 & 7                 & X    & X    &      &      &      &      \\ \hline
+\multicolumn{1}{|c|}{FR-4}                 & 8                 & X    &      &      &      & X    &      \\ \hline
+\multicolumn{1}{|c|}{FR-5}                 & 2                 &      &      &      &      &      &      \\ \hline
+\multicolumn{1}{|c|}{FR-6}                 & 4                 &      &      &      &      &      &      \\ \hline
+\multicolumn{1}{|c|}{FR-7}                 & 3                 &      & X    &      &      &      &      \\ \hline
+\multicolumn{1}{|c|}{FR-8}                 & 6                 &      & X    &      & X    &      &      \\ \hline
+\multicolumn{2}{|c|}{\textbf{Use Case Priority}}               & 1    & 3    & 4    & 6    & 2    & 5    \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{Location Management Subsystem Traceability Matrix}
+\label{my-label}
+\begin{tabular}{cc|c|c|c|c|c|}
+\cline{3-7}
+                                           &                   & \multicolumn{5}{c|}{\textbf{Use Cases}} \\ \hline
+\multicolumn{1}{|c|}{\textbf{Requirement}} & \textbf{Priority} & 2.1    & 2.2    & 2.3   & 2.4   & 2.5   \\ \hline
+\multicolumn{1}{|c|}{FR-1}                 & 1                 &        & X      & X     &       & X     \\ \hline
+\multicolumn{1}{|c|}{FR-2}                 & 5                 &        &        &       &       &       \\ \hline
+\multicolumn{1}{|c|}{FR-3}                 & 7                 & X      &        &       &       & X     \\ \hline
+\multicolumn{1}{|c|}{FR-4}                 & 8                 &        &        &       & X     &       \\ \hline
+\multicolumn{1}{|c|}{FR-5}                 & 2                 &        &        &       &       &       \\ \hline
+\multicolumn{1}{|c|}{FR-6}                 & 4                 &        &        &       &       &       \\ \hline
+\multicolumn{1}{|c|}{FR-7}                 & 3                 & X      & X      &       & X     &       \\ \hline
+\multicolumn{1}{|c|}{FR-8}                 & 6                 &        &        & X     &       &       \\ \hline
+\multicolumn{2}{|c|}{\textbf{Use Case Priority}}               & 1      & 4      & 5     & 2     & 3     \\ \hline
+\end{tabular}
+\end{table}
 	
 	
 	\item \underline{Location Management Subsystem}
@@ -197,60 +188,26 @@
 	Not relevant
 	
 	\subsection{Design Constraints}
-	This section describes restrictions on design alternatives regarding standards and limitations of hardware capabilities.
+	This section describes restrictions on design alternatives regarding standards and limitations of hardware capabilities
 	\begin{enumerate}
-			\item \textbf{Storage space}\newline
-			 \textbf{Description:} The amount of storage space required by the application must be within the maximum storage limits of a budget phone to accomodate a range of phones typically used by students.
-			\begin{itemize}
+		\item \textbf{Storage space}
+		\begin{itemize}
+			\item \textbf{Description:} The amount of storage space required by the application must be within the maximum storage limits of a budget phone to accomodate a range of phones typically used by students.
 			\item \textbf{Maximum:} 90MB
 			\item \textbf{Reasonable:} 40MB
 			\item \textbf{Optimal:} 10MB.\newline
-			\end{itemize}
+		\end{itemize}
 	
-			\item \textbf{Memory usage}\newline
-			\textbf{Description:} The amount of RAM used by the application should be a reasonable amount considering that some smartphones only have a capacity of 1GB RAM
-			\begin{itemize}
+		\item \textbf{Memory usage}
+		\begin{itemize}
+			\item \textbf{Description:} The amount of RAM used by the application should be a reasonable amount considering that some smartphones only have a capacity of 1GB RAM
 			\item \textbf{Maximum:} 150MB
 			\item \textbf{Reasonable:} 90MB
 			\item \textbf{Optimal:} 40MB.\newline
-			\end{itemize}
+		\end{itemize}
 	\end{enumerate}
 	
 	\subsection{Software System Attributes}
-	This section describes all quality related requirements of the software system.
-	\begin{enumerate}
-			\item \textbf{Reliability}\newline
-			 \textbf{Description:} The system should return results that are trustable and accurate
-			\begin{itemize}
-			\item \textbf{Minimum:} 98\% response and accuracy rate
-			\item \textbf{Reasonable:} 99\% response and accuracy rate
-			\item \textbf{Optimal:} 100\% response and accuracy rate\newline
-			\end{itemize}
-		
-			\item \textbf{Security}\newline
-			\textbf{Description:} The system must maintain encryption between system and server so that usernames and passwords remain confidential and database security is not compromised.
-			\begin{itemize}
-			\item \textbf{Minimum:} 100\% encryption and security rate
-			\item \textbf{Reasonable:} 100\% encryption and security rate
-			\item \textbf{Optimal:} 100\% encryption and security rate\newline
-			\end{itemize}
-			
-			\item \textbf{Availability}\newline
-			\textbf{Description:} The system must be usable at any given time since it will be used by students during the day and possibly visitors for events during the night.
-			\begin{itemize}
-			\item \textbf{Minimum:} 98\% availability rate
-			\item \textbf{Reasonable:} 99\% availability rate
-			\item \textbf{Optimal:} 100\% availability rate\newline
-			\end{itemize}
-			
-			\item \textbf{Interoperability}\newline
-			\textbf{Description:} The system must have the ability to exchange and use data between the application and database effectively.
-			\begin{itemize}
-			\item \textbf{Minimum:} 98\% Interoperability rate
-			\item \textbf{Reasonable:} 99\% Interoperability rate
-			\item \textbf{Optimal:} 100\% Interoperability rate\newline
-			\end{itemize}
-	\end{enumerate}
 	\subsection{Other Requirements}
-	Not relevant
+  
 \end{document}
