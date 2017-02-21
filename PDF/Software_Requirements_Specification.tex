@@ -190,6 +190,46 @@
 	\end{figure}
 	
 	\item \underline{User Account Management Subsystem}
+	\begin{enumerate}
+		\item Create Profile
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must be able to provide the user with a means to create their profiles which will then allow them to login to the NavUP application. 
+			\item \textbf{Precondition:} User must be in range of WiFi.
+			\item \textbf{Postcondition:} A new user account is created.\newline
+		\end{enumerate}
+		
+		\item Login Function
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must allow users with a profile to be able to login to said profile and use the NavUP system to the fullest. 
+			\item \textbf{Precondition:} User must be in range of WiFi and have an existing NavUP account.
+			\item \textbf{Postcondition:} User is logged in.\newline
+		\end{enumerate}
+		
+		\item Manage Profile
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must allow users to manage their own profiles as well as allow administrators to keep track of user profiles. 
+			\item \textbf{Precondition:} User must be in range of WiFi and logged in. Admin has no precondition.  
+			\item \textbf{Postcondition:} User profile may be altererd.\newline
+		\end{enumerate}
+		
+		\item Create Timetable
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system should be able to allow users to create their personal timetables. 
+			\item \textbf{Precondition:} User must be in range of WiFi and logged in.
+			\item \textbf{Postcondition:} Timetable is created on user's profile.\newline
+		\end{enumerate}
+		
+		\item Manage Timetable
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must allow users to edit or manage their existing timetables so as to fit their needs. It must also allow administrators to keep track of the user’s timetable. 
+			\item \textbf{Precondition:} User must have existing timetable.
+			\item \textbf{Postcondition:} Timetable is edited on the users profile.\newline
+		\end{enumerate}
+	\end{enumerate}
+	\begin{figure}[h!]
+		\includegraphics[scale=0.5]{User_Account_Management.JPG}
+		\caption{User Account Management Subsystem}	
+	\end{figure}
 	
 	
 	\item \underline{Entertainment Subsystem}
