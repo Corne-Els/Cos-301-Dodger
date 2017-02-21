@@ -33,27 +33,10 @@
 	
 	\section{Overall Description}
 	\subsection{Product Perspective}
-	The main system will be a server on campus that is connected to a database where user's details are stored such as degree, interests and timetable. The user will log into the main system by means of a user friendly GUI provided on the mobile application that sends the user's details to the server over the internet to look at the authenticity and correctness of the provided details. Thereafter the main system will load information about the user and populate the GUI with the relevant information based on the category of the current user be it a student or administrator. The application will then use wifi connections, cell phone towers and GPS to determine the user's position and then triangulate them to the destination class or activity based on these calculations. When administrators update the application or database through the server or the application itself it will notify the user and update the relevant information for the user, for example if a class is cancelled, it will update the user's timetable and notify the user of this update through the GUI as well as push notifications. The map of campus can be loaded onto the mobile application to reduce long term internet usage and only the destination and route to get there will be sent over the network.
 	\subsection{Product Function}
-	\begin{itemize}
-	\item Navigation from and to a location
-	\item Store users timetable to automatically tell user where to go next
-	\item View more information about a specific location
-	\item See upcoming events when at a location or based on users interests
-	\item Reward user for completing challenges 
-	\item Update user timetables if classes are cancelled or if there will be a test
-	\end{itemize}
 	\subsection{User Characteristics}
-	Four categories of users will be present:
-	\begin{itemize}
-	\item Guest user: Basic education level is needed as this user will just be making use of the navigation system and search system so a basic technical skill will be needed.
-	\item Main user (student): This user has at least a high school level education and will be using more advanced parts of the system such as setting up a class timetable, looking at and competing in the reward system and managing their profile.
-	\item Administrator / lecturer: This user has at least a high school level education and will need a more advanced technical knowledge as this user will be setting up events, cancelling classes and fixing or updating the system for other users.  
-	\item 3rd party Rewards manager: High school level education will be needed as more advanced tasks will be left up to this user such as set up challenges for the other users and include rewards if challenge is completed. An advanced technical knowledge will be needed by this user.
-
-	\end{itemize}
 	\subsection{Constraints}
-	This section describes restrictions on the options that are available when developing the application within feasable regions
+	This section describes restrictions on the options that are available when developing the application within feasable regions.
 		\begin{itemize}
 			\item Connections are limited to different types of networks at different locations. GPS cannot be used within buildings and some buildings lack a strong Wi-Fi signal. Mobile networks may also switch to EDGE in some buildings where faster connections aren't available.
 			\item Application is initially constrained to Android and iOS only.
@@ -67,10 +50,44 @@
 	This section expands on the functional requirements of the system. It gives a detailed 	description of the system and all of its use cases.
 	
 	\subsection{External Interface Requirements}
-	Not relevant
+	This section provides a detailed description for each interface that composes the system along with other relevant information.
+		\subsubsection{User Interface}
+		\begin{itemize}
+		\item The user interface should initially be a login screen for first time users or logged out users. This login screen will also have the option for new users to register.
+		\item Users should then be able to type in their preferred destination or search via an advanced search method to find a number of different places based on their search criteria.
+		\item A results page will be in the form of a visual map which can be used interactively by the user to view his/her route clearly or to view other places of interest along the way.
+		\item A settings page will be available for users to tweak the application to their needs as well as to update personal settings.\newline
+		\end{itemize}
+		
+		\subsubsection{Hardware Interface}
+		\begin{itemize}
+		\item Abstract interface via application and database infrastructure not visible to user.\newline
+		\end{itemize}
+		
+		\subsubsection{Software Interface}
+		\begin{itemize}
+		\item Application and GPS application communicate in order to receive geographical information. 			\item Application and database communicate in order to receive information about classes and desired locations.\newline
+		\end{itemize}
+		
+		\subsubsection{Communication Interface}
+		\begin{itemize}
+		\item No specific interface implemented. Communication is left to the underlying operating system of the application and portal/database.\newline
+		\end{itemize}
+		
+	
 	\subsection{Functional Requirements}
 	This section includes all functional requirements in detail. It includes all use case diagrams, Actor-System interaction diagrams as well as a traceability matrix.	
-	
+	\subsubsection{High Level Requirements}
+	\begin{FR}
+		\item The system should have basic navigation functionality 
+		\item The system should be able to provide and visualise information related to pedestrian traffic
+		\item The system should be able to push new information to users based on their preferences and interests
+		\item The system should integrate various activities that use location and movement
+		\item The system should provide functionality to create, read, update and delete users 
+		\item The system should allow users to create and manage timetables
+		\item The system should allow users to save and share locations
+		\item The system should be able to allow users to manage events they are interested in on campus
+	\end{FR}
 	\subsubsection{Use cases}
 	\begin{enumerate}
 		\item \underline{Navigation Subsystem}
@@ -167,27 +184,60 @@
 	Not relevant
 	
 	\subsection{Design Constraints}
-	This section describes restrictions on design alternatives regarding standards and limitations of hardware capabilities
+	This section describes restrictions on design alternatives regarding standards and limitations of hardware capabilities.
 	\begin{enumerate}
-		\item \textbf{Storage space}\newline
+			\item \textbf{Storage space}\newline
 			 \textbf{Description:} The amount of storage space required by the application must be within the maximum storage limits of a budget phone to accomodate a range of phones typically used by students.
 			\begin{itemize}
 			\item \textbf{Maximum:} 90MB
 			\item \textbf{Reasonable:} 40MB
 			\item \textbf{Optimal:} 10MB.\newline
-		\end{itemize}
+			\end{itemize}
 	
-		\item \textbf{Memory usage}\newline
+			\item \textbf{Memory usage}\newline
 			\textbf{Description:} The amount of RAM used by the application should be a reasonable amount considering that some smartphones only have a capacity of 1GB RAM
 			\begin{itemize}
 			\item \textbf{Maximum:} 150MB
 			\item \textbf{Reasonable:} 90MB
 			\item \textbf{Optimal:} 40MB.\newline
-		\end{itemize}
+			\end{itemize}
 	\end{enumerate}
 	
 	\subsection{Software System Attributes}
-	Not relevant
+	This section describes all quality related requirements of the software system.
+	\begin{enumerate}
+			\item \textbf{Reliability}\newline
+			 \textbf{Description:} The system should return results that are trustable and accurate
+			\begin{itemize}
+			\item \textbf{Minimum:} 98\% response and accuracy rate
+			\item \textbf{Reasonable:} 99\% response and accuracy rate
+			\item \textbf{Optimal:} 100\% response and accuracy rate\newline
+			\end{itemize}
+		
+			\item \textbf{Security}\newline
+			\textbf{Description:} The system must maintain encryption between system and server so that usernames and passwords remain confidential and database security is not compromised.
+			\begin{itemize}
+			\item \textbf{Minimum:} 100\% encryption and security rate
+			\item \textbf{Reasonable:} 100\% encryption and security rate
+			\item \textbf{Optimal:} 100\% encryption and security rate\newline
+			\end{itemize}
+			
+			\item \textbf{Availability}\newline
+			\textbf{Description:} The system must be usable at any given time since it will be used by students during the day and possibly visitors for events during the night.
+			\begin{itemize}
+			\item \textbf{Minimum:} 98\% availability rate
+			\item \textbf{Reasonable:} 99\% availability rate
+			\item \textbf{Optimal:} 100\% availability rate\newline
+			\end{itemize}
+			
+			\item \textbf{Interoperability}\newline
+			\textbf{Description:} The system must have the ability to exchange and use data between the application and database effectively.
+			\begin{itemize}
+			\item \textbf{Minimum:} 98\% Interoperability rate
+			\item \textbf{Reasonable:} 99\% Interoperability rate
+			\item \textbf{Optimal:} 100\% Interoperability rate\newline
+			\end{itemize}
+	\end{enumerate}
 	\subsection{Other Requirements}
 	Not relevant
 
