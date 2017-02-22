@@ -383,6 +383,44 @@
  \multicolumn{2}{|c|}{Use Case Priority}      & 2      & 3     & 1     & 3     \\ \hline
  \end{tabular}
  \end{table}
+ 
+ 
+ 		\begin{enumerate}	
+			
+		\item Set Goals
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must enable users to Set Goals for Achievements created on the system. 
+			\item \textbf{Precondition:} An Achievement must be created on the system before Goals can be set for it. 
+			\item \textbf{Postcondition:} Every Goal set must be associated with an achievement. 			
+		\end{enumerate}
+		
+		\item View Leaderboard
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system will have a leaderboard interface that will showcase the top x users of the system based on the goals and achievements they have completed successfully. 
+			\item \textbf{Precondition:} A maximum number of users to view on the leaderboard must be specified. 
+			\item \textbf{Postcondition:} None			
+			
+		\end{enumerate}
+		
+		\item Record Steps
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must be able to record steps that a user has taken. 
+			\item \textbf{Precondition:} The application must be running on their chosen device i.e. not closed.
+			\item \textbf{Postcondition:} The application must be able to, at any given moment inform the user of how many steps they have.
+			
+		\end{enumerate}
+		
+		\item Challenge friend
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must enable users to interact with other users on the system and challenge them to complete achievements. 
+			\item \textbf{Precondition:} The users in question must be enrolled on the system. 
+			\item \textbf{Postcondition:} The user being challenged must be notified of the challenge and who it is from. \newline					
+			
+		\end{enumerate}
+			
+	\end{enumerate}	 
+ 
+ 
 	\item \underline{Administration Subsystem}
 			\begin{table}[]
  \centering
@@ -403,6 +441,52 @@
  \multicolumn{2}{|c|}{Use Case Priority}      & 2      & 1     & 3     & 1     \\ \hline
  \end{tabular}
  \end{table}
+ 
+ 
+	\begin{enumerate}
+			
+		\item Manage Users
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must enable an administrator to add users to the system. 
+			\item \textbf{Precondition:} User details must be valid and correct (e.g a valid email address) 
+			\item \textbf{Postcondition:} User must be notified that they have been successfully registered onto the system.
+			
+		\end{enumerate}
+		
+		\item Manage Locations
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must enable the administrator to mark important locations on the system. E.g. The CSC is an important location that should be highlighted when using the system. 
+			\item \textbf{Precondition:} The user managing the locations must have administrator access. 
+			\item \textbf{Postcondition:} None			
+		\end{enumerate}
+		
+		\item Manage Events
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must enable an administrator to create and publish, update and remove events on the system. 
+			\item \textbf{Precondition:} The user managing the event must have administrator access. 
+			\item \textbf{Postcondition:} All users subscribed to the event must be notified of changes.  \newline			
+		\end{enumerate}	
+		
+		\item Notify Users
+		\begin{enumerate}
+			\item \textbf{Description:} The NavUP system must enable an administrator to notify users of various actions being performed on the application. 
+			
+			This includes actions such as Publishing events etc.
+			\item \textbf{Precondition:} The users being notified should be subscribers of the event
+			\item \textbf{Postcondition:} None		
+		\end{enumerate}		
+		
+	\end{enumerate}
+	
+	\begin{figure}[h!]
+		\includegraphics[scale=0.5]{Administrator.jpg}
+		\caption{Administrator Subsystem}	
+		\end{figure} 
+ 
+ 
+ 
+ 
+ 
 	\end{enumerate}
 	
 	
