@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \graphicspath{{Figures/}}
 
+
 \title{Software Requirements Specification}
 \date{24 February 2017}
 \author{Team Dodger}
@@ -416,10 +417,13 @@
 			\item \textbf{Precondition:} The users in question must be enrolled on the system. 
 			\item \textbf{Postcondition:} The user being challenged must be notified of the challenge and who it is from. \newline					
 			
-		\end{enumerate}
-			
-	\end{enumerate}	 
- 
+		\end{enumerate}			
+	\end{enumerate}	
+	
+	\begin{figure}[h!]
+		\includegraphics[scale=0.5]{Achievements_Subsystem.jpg}
+		\caption{Achievements Subsystem}	
+	\end{figure}  
  
 	\item \underline{Administration Subsystem}
 			\begin{table}[]
@@ -442,7 +446,6 @@
  \end{tabular}
  \end{table}
  
- 
 	\begin{enumerate}
 			
 		\item Manage Users
@@ -455,7 +458,7 @@
 		
 		\item Manage Locations
 		\begin{enumerate}
-			\item \textbf{Description:} The NavUP system must enable the administrator to mark important locations on the system. E.g. The CSC is an important location that should be highlighted when using the system. 
+			\item \textbf{Description:}  The NavUP system must enable the administrator to mark important locations on the system. E.g. The CSC is an important location that should be highlighted when using the system. 
 			\item \textbf{Precondition:} The user managing the locations must have administrator access. 
 			\item \textbf{Postcondition:} None			
 		\end{enumerate}
@@ -481,14 +484,9 @@
 	\begin{figure}[h!]
 		\includegraphics[scale=0.5]{Administrator.jpg}
 		\caption{Administrator Subsystem}	
-		\end{figure} 
- 
- 
- 
- 
+	\end{figure} 
  
 	\end{enumerate}
-	
 	
 	\subsection{Performance Requirements}
 	Not relevant
@@ -544,11 +542,15 @@
  			\textbf{Description:} The system must have the ability to exchange and use data between the application and database effectively.
  			\begin{itemize}
  			\item \textbf{Minimum:} 98\% Interoperability rate
- 			\item \textbf{Reasonable:} 99\% Interoperability rate
+ 			\item \textbf{Reasonable:} 99\% Interoperability \cite{bibliography:1} rate
  			\item \textbf{Optimal:} 100\% Interoperability rate\newline
  			\end{itemize}
  	\end{enumerate}
 	\subsection{Other Requirements}
 	Not relevant
-  
+	
+\newpage
+\bibliography{bibliography}
+\bibliographystyle{plain}
+	 
 \end{document}
