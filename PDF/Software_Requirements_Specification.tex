@@ -170,126 +170,6 @@
 		\includegraphics[scale=0.5]{Navigation_Subsystem.png}
 		\caption{Navigation Subsystem}	
 	\end{figure}
-	
-	\subsection{Get Current Location}
-	
-	\begin{tabular}{ | m{15em} | m{15em}| } 
-		\hline
-		Preconditions: 							& The user must have an active account and must be within range of WiFi routers. \\
-		\hline
-		Actor: User 								&  System: Up Nav \\ 
-		\hline
-											& 0. The system  displays the user's Home page\\ 
-		\hline
-		1. The user selects the "Navigation" option			& 2. The system displays the Navigation page. \\
-		\hline
-		3. The user selects the "Get Current Location" option. 	& 4. The system determines the users current location. \\
-		\hline																
-											& 5. The system displays a map on which the users current location is presented. \\
-		\hline
-		Post Conditions: 							& The users location is determined and displayed. \\
-		\hline
-	\end{tabular}
-
-	\subsection{Search Location}
-	\begin{tabular}{ | m{15em} | m{15em}| } 
-		\hline
-		Preconditions: 													& The user must have an active account \\
-		\hline
-		Actor: User 														&  System: Up Nav \\ 
-		\hline
-																	& 0. The system  displays the user's Home page\\ 
-		\hline
-		1. The user selects the "Navigation" option									& 2. The system displays the Navigation page. \\
-		\hline
-		3. The user selects the "Search Location" option.								& 4. The system displays a search bar on the screen. \\ 
-		\hline
-		5. The User enters a location which they would like to search for and press the search button		& 6. The system searches all the registered locations based on the search term entered by the user. \\
-		\hline
-																	& 7. The system displays a list of locations which matched the search criteria. \\
-		\hline
-		Post Conditions:													&Matching locations are returned to the user. If no buildings match the search criteria, an appropriate error message is displayed. \\
-		\hline
-	\end{tabular}
-
-	\subsection{View Location Details}
-	
-		\begin{tabular}{ | m{15em} | m{15em}| } 
-		\hline
-		Preconditions                                                     					& The user must have an active account and a valid location must be selected on the map. \\ 
-		\hline
-		Actor: User                                                      					& System: Up Nav  \\ 
-		\hline
-                                                                 							& 0. The system displays a list of locations from the location search.  \\
-		 \hline
-		1. The user selects one of the locations from the provided list. 		& 2. The system retrieves information related to the location selected by the user. \\ 
-		\hline
-                                                                 							& 3. The system displays the location information. \\ 
-		\hline
-		Post conditions									& Relevant location details shown to user. \\
-		\hline
-		\end{tabular}
-
-	\subsection{View Places of Interest}
-	
-	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                             				& The user must have an active account and their current location must be known. \\ 
-		\hline
-		Actor: User                                              				& System: Up Nav \\
-		 \hline
-                                                          							& 0. The system displays the user's Home page. \\
-		\hline
-		1. The user selects the "Navigation" option				& 2. The system displays the Navigation page. \\
-		\hline
-		3. The user selects the "View Places of Interest" option. 		& 4. The system retrieves a list of general places of interest based on the user's location. \\ 
-		\hline
-                                                          							& 5. The system displays the places of interest to the user. \\ 
-		\hline
-		Post conditions								& Relevant location details shown to user. \\
-		\hline
-		\end{tabular}
-
-	\subsection{Navigate to Location}
-
-	\centering
-
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline 
-		Preconditions                                                                                 						& The user must have an active account. The users current location must be known and the must have specified a destination through the search interface. \\ 
-		\hline
-		Actor: User                                                                                  						& System: Up Nav \\ 
-		\hline
-                                                                                             									& 0. The system displays the details of a location. \\ 
-		\hline
-		1. The user selects the "Navigate to Location" option                                        				& 2. The system displays a list of navigation preferences for the user to enable / disable, namely "Avoid Pedestrian Traffic" and "Disability Friendly Route". \\
-		\hline
-		3. The user selects their desired preferences.                                               				& 4. The system calculates a route based on the user's preferences. \\ 
-		\hline
-                                                                                            									& 5. The system marks the calculated route on the map and displays this map to the user. \\ 
-		\hline
-																	& 6. UC 1.6 View Pedestrian Traffic \\
-		\hline
-		Post conditions                                                                               						& The user is provided with directions from their current location to their desired destination \\ 
-		\hline
-	\end{tabular}
-	
-	\subsection{View Pedestrian Traffic}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions													& Users must all have the NavUP app installed and must be registered in order for them to show up on the heat map. The current user must have selected the option to navigate to a location \\
-		\hline
-		Actor: User														& System: Up Nav \\
-		\hline
-																	& 0. The system scans the calculated route for other users. \\
-		\hline
-																	& 1. The system displays a heat map to indicate the amount of users along the selected route. \\
-		\hline
-		Post condition													& A heat map of the campus is displayed \\
-		\hline
-
-	\end{tabular}
 
 	
 	\begin{table}[h!]
@@ -333,112 +213,6 @@
 \multicolumn{2}{|c|}{\textbf{Use Case Priority}}               & 1      & 4      & 5     & 2     & 3     \\ \hline
 \end{tabular}
 \end{table}
-
-\section{User Account Management System}
-
-	\subsection{Create Profile}
-
-	\centering
-
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       				& The user must not exist on the system \\ 				
-		\hline
-		Actor: User                                                       					& System: Up Nav \\ 			
-		\hline
-                                                                  							& 0. The system displays Login Page with a "Register" option. \\                                                           
-		 \hline
-		1. The user selects the "Register" option.					& 2.  The system displays a form for the user to complete their profile. \\				
-		\hline
-		3. The user fills in their profile details and selects the save option. 		& 4. The system saves the users profile details and notifies the user that their profile has been created. \\ 
-		\hline
-		Post condition                                                     				& The new user is registered on the system \\ 				
-		\hline
-	\end{tabular}
-
-	\subsection{Login}
-	
-	\centering
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                    												& The user must be registered on the system \\ 
-		\hline
-		Actor: User                                     												& System: Up Nav \\ 
-		\hline
-                                               		 													& 0. The system displays the user's Login page. \\ 
-		\hline
-		1. The user enters their username and password. 										& 2. The system verifies the credentials entered by the user. \\
-		\hline
-                                                															& 3. The system logs the user in and displays the user's home page. \\
-		\hline
-		Post condition                                  												& The user is logged in to the system \\ 
-		\hline
-	\end{tabular}
-
-
-	\subsection{Manage Profile}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       						& The user must be logged in \\ 				
-		\hline
-		Actor: User                                                       							& System: Up Nav \\ 			
-		\hline
-                                                                  									& 0. The system displays the user's Home page. \\                                                           
-		 \hline
-		1. The user selects the "Manage Account" option.						& 2. The system displays the User Account Management page. \\
-		 \hline
-		3. The user selects the "Manage Profile" option. 						& 4.  The system displays a form which is populated by the users current profile details. \\
-		\hline
-		5a. The user edits their current details and selects the save option. 			& 6a. The system saves the users profile details and notifies the user that their details have been saved. \\ 
-		\hline
-		5b. The user selects the "Delete Profile" option.						& 6b The system prompts the user to confirm the deletion. \\
-		\hline
-		7b The user confirms the deletion.								& 8b. The system deletes the users profile and notifies the user that their profile has been deleted. \\
-		\hline
-		Post condition                                                     						& None \\ 			
-		\hline
-	\end{tabular}
-
-	\subsection{Create Timetable}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       				& The user must be logged in \\ 				
-		\hline
-		Actor: User                                                       					& System: Up Nav \\ 			
-		\hline
-                                                                  							& 0. The system displays the user's Home page. \\                                                           
-		 \hline
-		1. The user selects the "Manage Account" option.				& 2. The system displays the User Account Management page. \\
-		 \hline
-		3. The user selects the "Create Timetable" option. 				& 4.  The system displays a timetable for the user to complete. \\
-		\hline
-		5a. The user adds their lecture details on the timetable. 			& 6a. The system saves the timetable and notifies the user that their timetable has been saved. \\ 
-		\hline
-		Post condition                                                     				& A new timetable is created for the user. \\ 			
-		\hline
-	\end{tabular}
-
-	\subsection{Manage Timetable}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       				& The user must be logged in \\ 				
-		\hline
-		Actor: User                                                       					& System: Up Nav \\ 			
-		\hline
-                                                                  							& 0. The system displays the user's home page. \\                                                           
-		 \hline
-		1. The user selects the "Manage Account" option.				& 2. The system displays the User Account Management page. \\
-		 \hline
-		3. The user selects the "Manage Timetable" option. 				& 4.  The system displays the user's current timetable. \\
-		\hline
-		5a. The user edits their current timetable and selects the save option. 	& 6a. The system saves the users timetable and notifies the user that their timetable have been saved. \\ 
-		\hline
-		5b. The user selects the "Delete Timetable"  option.				&6b. The system deletes the user's timetable  and notifies the user that their timetable has been deleted. \\
-		\hline
-		Post condition                                                     				& The user's timetable is edited or deleted \\ 			
-		\hline
-	\end{tabular}
-
 
 
 \begin{table}
@@ -523,122 +297,6 @@
 		\caption{Location Management Subsystem}	
 	\end{figure}
 	
-	\section{Location Sub-System}
-
-	\subsection{Save Location}
-
-	\centering
-
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                    										& The user must be logged in to the system.  \\ 
-		\hline
-		Actor: User                                     										& System: Up Nav                                                                  \\ 
-		\hline
-                                               													& 0. The system displays the details of a location which was selected by the user \\
-		\hline
-		1. The user selects the "Save Location" option. 								& 2. The system adds the location to the "Saved Locations" list. \\
-		\hline
-                                                													& 3. The system notifies the user that the location has been saved. \\
-		\hline
-		Post condition                                   										& The location will be saved to the user's Saved Locations list \\
-		\hline
-	\end{tabular}
-	
-	\subsection{View Saved Locations}
-
-	\centering
-
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                          										& The user must be logged in \\ 
-		\hline
-		Actor: User                                            										& System: Up Nav \\
-		\hline
-                                                       												& 0. The system displays the user's Home page. \\ 
-		\hline
-		1. The user selects the "Manage Locations" option								& 2. The system displays the Manage Locations page. \\
-		\hline
-		3. The user selects the "View Saved Locations" option.							& 4. The system retrieves a list of all the locations previously saved by the user. \\ 
-		\hline
-                                                      												& 5. The system displays a list of saved locations. \\
-		\hline
-		Post condition                                         		 								& None                                                                              \\
-		\hline
-	\end{tabular}
-
-
-	\subsection{View History}
-
-	\centering
-
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                   										& The user must be logged in \\ 
-		\hline
-		Actor: User                                    										& System: Up Nav \\ 
-		\hline
-                                               													& 0. The system displays the user's Home page. \\ 
-		\hline
-		1. The user selects the "Manage Locations" option								& 2. The system displays the Manage Locations page. \\
-		\hline
-		3. The user selects the "View History" option. 									& 4. The system retrieves a list of all the locations previously searched for by the user. \\ 
-		\hline
-                                               													& 5. The system displays a list of the user's history. \\
-		 \hline
-		Post condition                                 										& None \\ 
-		\hline
-	\end{tabular}
-	
-
-	\subsection{Share Location}
-
-	\centering
-
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                                                                						& The user must select the "View Current Location" option \\ 
-		\hline
-		Actor: User                                                                                                						 	& System: Up Nav \\ 
-		\hline
-                                                                                                            									& 0. The system displays the user's current location. \\ 
-		\hline
-		1. The user selects the "Share Location" option.                                                            					& 2. The system displays a search bar to search for users. \\
-		\hline
-		3. The user enters the user name of the user they wish to send a location to and presses the search button. 	& 4. The system searches for the user based on the search term entered by the user. \\ 
-		\hline
-                                                                                                            									& 5. The system displays the search results. \\ 
-		\hline
-		6. The user selects the user which they would like to share their location with.                            			& 7. The system sends a location to the selected user. \\ 
-		\hline
-		Post condition                                                                                               						& The current user's location is sent to another user. \\ 
-		\hline
-
-	\end{tabular}
-
-
-	\subsection{View Most Visited Locations}
-
-	\centering
-
-		\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                  											& The user must be logged in \\ 
-		\hline
-		Actor: User                                                  											& System: Up Nav \\ 
-		\hline
-                                                              														& 0. The system displays the user's Home page. \\ 
-		\hline
-		1. The user selects the "Manage Locations" option										& 1. The system displays the Manage Locations page. \\
-		\hline
-		3. The user selects the "View Most Visited Locations" option. 								& 3. The system retrieves a list of the user's visited locations ordered by frequency of navigation. \\ 
-		\hline
-                                                              														& 5. The system displays the list of visited locations to the user. \\ 
-		\hline
-		Post condition                                                											& The user's most visited locations are displayed \\ 
-		\hline
-	\end{tabular}
-
 	
 	\item \underline{User Account Management Subsystem}
 	\begin{enumerate}
@@ -682,112 +340,6 @@
 		\caption{User Account Management Subsystem}	
 	\end{figure}
 	
-		\section{User Account Management System}
-
-	\subsection{Create Profile}
-
-	\centering
-
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       				& The user must not exist on the system \\ 				
-		\hline
-		Actor: User                                                       					& System: Up Nav \\ 			
-		\hline
-                                                                  							& 0. The system displays Login Page with a "Register" option. \\                                                           
-		 \hline
-		1. The user selects the "Register" option.					& 2.  The system displays a form for the user to complete their profile. \\				
-		\hline
-		3. The user fills in their profile details and selects the save option. 		& 4. The system saves the users profile details and notifies the user that their profile has been created. \\ 
-		\hline
-		Post condition                                                     				& The new user is registered on the system \\ 				
-		\hline
-	\end{tabular}
-
-	\subsection{Login}
-	
-	\centering
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                    												& The user must be registered on the system \\ 
-		\hline
-		Actor: User                                     												& System: Up Nav \\ 
-		\hline
-                                               		 													& 0. The system displays the user's Login page. \\ 
-		\hline
-		1. The user enters their username and password. 										& 2. The system verifies the credentials entered by the user. \\
-		\hline
-                                                															& 3. The system logs the user in and displays the user's home page. \\
-		\hline
-		Post condition                                  												& The user is logged in to the system \\ 
-		\hline
-	\end{tabular}
-
-
-	\subsection{Manage Profile}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       						& The user must be logged in \\ 				
-		\hline
-		Actor: User                                                       							& System: Up Nav \\ 			
-		\hline
-                                                                  									& 0. The system displays the user's Home page. \\                                                           
-		 \hline
-		1. The user selects the "Manage Account" option.						& 2. The system displays the User Account Management page. \\
-		 \hline
-		3. The user selects the "Manage Profile" option. 						& 4.  The system displays a form which is populated by the users current profile details. \\
-		\hline
-		5a. The user edits their current details and selects the save option. 			& 6a. The system saves the users profile details and notifies the user that their details have been saved. \\ 
-		\hline
-		5b. The user selects the "Delete Profile" option.						& 6b The system prompts the user to confirm the deletion. \\
-		\hline
-		7b The user confirms the deletion.								& 8b. The system deletes the users profile and notifies the user that their profile has been deleted. \\
-		\hline
-		Post condition                                                     						& None \\ 			
-		\hline
-	\end{tabular}
-
-	\subsection{Create Timetable}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       				& The user must be logged in \\ 				
-		\hline
-		Actor: User                                                       					& System: Up Nav \\ 			
-		\hline
-                                                                  							& 0. The system displays the user's Home page. \\                                                           
-		 \hline
-		1. The user selects the "Manage Account" option.				& 2. The system displays the User Account Management page. \\
-		 \hline
-		3. The user selects the "Create Timetable" option. 				& 4.  The system displays a timetable for the user to complete. \\
-		\hline
-		5a. The user adds their lecture details on the timetable. 			& 6a. The system saves the timetable and notifies the user that their timetable has been saved. \\ 
-		\hline
-		Post condition                                                     				& A new timetable is created for the user. \\ 			
-		\hline
-	\end{tabular}
-
-	\subsection{Manage Timetable}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       				& The user must be logged in \\ 				
-		\hline
-		Actor: User                                                       					& System: Up Nav \\ 			
-		\hline
-                                                                  							& 0. The system displays the user's home page. \\                                                           
-		 \hline
-		1. The user selects the "Manage Account" option.				& 2. The system displays the User Account Management page. \\
-		 \hline
-		3. The user selects the "Manage Timetable" option. 				& 4.  The system displays the user's current timetable. \\
-		\hline
-		5a. The user edits their current timetable and selects the save option. 	& 6a. The system saves the users timetable and notifies the user that their timetable have been saved. \\ 
-		\hline
-		5b. The user selects the "Delete Timetable"  option.				&6b. The system deletes the user's timetable  and notifies the user that their timetable has been deleted. \\
-		\hline
-		Post condition                                                     				& The user's timetable is edited or deleted \\ 			
-		\hline
-	\end{tabular}
-	
-	
 	\item \underline{Entertainment Subsystem}
 			\begin{enumerate}
 		\item View events
@@ -816,129 +368,6 @@
 		\caption{Navigation Subsystem}	
 	\end{figure}	
 	
-	\section{Entertainment Sub-System}
-	
-	\subsection{View Events}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       				& The user must be logged in \\ 				
-		\hline
-		Actor: User                                                       					& System: Up Nav \\ 			
-		\hline
-                                                                  							& 0. The system displays the user's Home page. \\                                                           
-		 \hline
-		1. The user selects the "Entertainment" option.				& 2. The system displays the Entertainment  page. \\
-		 \hline
-		3. The user selects the "View Events" option. 					& 4.  The system retrieves a list of all scheduled events . \\
-		\hline
-													& 5. The system displays the list of events. \\
-		\hline
-		Post condition                                                     				& A list of all events is displayed to the user \\ 			
-		\hline
-	\end{tabular}
-	
-	\subsection{Save Event}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       				& The user has selected the View Events option \\ 				
-		\hline
-		Actor: User                                                       					& System: Up Nav \\ 			
-		\hline
-                                                                  							& 0. The system displays the list of all scheduled events. \\                                                           
-		 \hline
-		1. The user selects an event from the list.					& 2. The system displays the details of the event selected by the user. \\
-		 \hline
-		3. The user selects the "Save Event" option. 					& 4.  The system saves the event on the user's "Upcoming Events" list and notifies the user that the event has been saved . \\
-		\hline
-		Post condition                                                     				& An event is saved on the user's Upcoming Events list \\ 			
-		\hline
-	\end{tabular}
-
-	\subsection{Delete Event}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       											& None \\ 				
-		\hline
-		Actor: User                                                       												& System: Up Nav \\ 			
-		\hline
-                                                                  														& 0. The system displays the user's Home page. \\                                                           
-		 \hline
-		1. The user selects the "Entertainment" option.											& 2. The system displays the Entertainment  page. \\
-		 \hline
-		3. The user selects the "Manage Events" option. 											& 4.  The system retrieves a list of all the user's "Upcoming  Events" . \\
-		\hline
-		5. The user selects an event from their Upcoming Events list that they wish to delete.						& 6. The system prompts the user to confirm the deletion. \\
-		\hline
-		7. The user confirms the deletion														& 8. The system removes the event from their Upcoming Events list \\
-		\hline
-		Post condition                                                     											& An event is removed from the user's Upcoming Event list \\ 			
-		\hline
-	\end{tabular}
-	
-	\item \underline{Achievements Subsystem}
-	
-		\section{Achievements}
-
-	\subsection{Set Goal}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       										& The user must be logged in \\ 				
-		\hline
-		Actor: User                                                       											& System: Up Nav \\ 			
-		\hline
-                                                                  													& 0. The system displays the user's Home page. \\                                                           
-		 \hline
-		1. The user selects the "Achievements" option.										& 2. The system displays the Achievements  page. \\
-		 \hline
-		3. The user selects the "Set Goals" option. 											& 4.  The system displays a form with the fields "Number of Steps" and "Deadline" . \\
-		\hline
-		5. The user fills in the form and selects the save option.									& 6. The system saves the user's goal and notifies the user that their goal has been saved. \\
-		\hline
-		Post condition                                                     										& A new goal is created \\ 			
-		\hline
-	\end{tabular}
-
-	\subsection{View Leader board}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       										& The user must be logged in \\ 				
-		\hline
-		Actor: User                                                       											& System: Up Nav \\ 			
-		\hline
-                                                                  													& 0. The system displays the user's Home page. \\                                                           
-		 \hline
-		1. The user selects the "Achievements" option.										& 2. The system displays the Achievements  page. \\
-		 \hline
-		3. The user selects the "View Leader board" option. 										& 4.  The system displays the leader board" . \\
-		\hline
-		Post condition                                                     										& The leader board is displayed \\ 			
-		\hline
-	\end{tabular}
-	
-
-	\subsection{Challenge a Friend}
-	\begin{tabular}{ | m{15em} | m{15em}| }
-		\hline
-		Preconditions                                                       										& The user must be logged in \\ 				
-		\hline
-		Actor: User                                                       											& System: Up Nav \\ 			
-		\hline
-                                                                  													& 0. The system displays the user's home page. \\                                                           
-		 \hline
-		1. The user selects the "Achievements" option.										& 2. The system displays the Achievements  page. \\
-		 \hline
-		3. The user selects the "Challenge a Friend" option. 										& 4.  The system displays a form with the fields "Number of Steps" and "Deadline" . \\
-		\hline
-		5. The user fills in the form and selects the submit option.									& 6. The system displays a search bar.\\
-		\hline
-		7. The user enters the username of the user they wish to challenge and selects the search option			& 8. The system searches for the user based on the username provided and returns a list of search results. \\
-		\hline
-		9. The user selects a user from the search results.										&10. The system sends a notification to the selected user informing them of the challenge, and the current user is notified that their challenge has been issued \\
-		\hline
-		Precondition																& A challenge is issued to another user. \\
-		\hline
-	\end{tabular}
-	
 	\begin{table}[]
  \centering
  \caption{Achievements Subsystem Traceability Matrix}
@@ -958,12 +387,568 @@
  \multicolumn{2}{|c|}{Use Case Priority}      & 2      & 3     & 1     & 3     \\ \hline
  \end{tabular}
  \end{table}
-	\item \underline{Administration Subsystem}
 	
-	\section{Administration Sub-System}
+			\begin{table}[]
+ \centering
+ \caption{Administration Subsystem Traceability Matrix}
+ \label{my-label}
+ \begin{tabular}{cc|c|c|c|c|}
+ \cline{3-6}
+                                   &          & \multicolumn{4}{c|}{Use Cases} \\ \hline
+ \multicolumn{1}{|c|}{Requirement} & Priority & 6.1    & 6.2   & 6.3   & 6.4   \\ \hline
+ \multicolumn{1}{|c|}{FR-1}        & 1        &        &       &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-2}        & 5        &        &       &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-3}        & 7        &        &       &       & X     \\ \hline
+ \multicolumn{1}{|c|}{FR-4}        & 8        &        & X     &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-5}        & 2        & X      &       &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-6}        & 4        &        &       & X     &       \\ \hline
+ \multicolumn{1}{|c|}{FR-7}        & 3        &        & X     &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-8}        & 6        &        &       & X     &       \\ \hline
+ \multicolumn{2}{|c|}{Use Case Priority}      & 2      & 1     & 3     & 1     \\ \hline
+ \end{tabular}
+ \end{table}
+	\end{enumerate}
+	
+\begin{center}
+\subsection{Actor-System Interaction Modeling}
+	
+\begin{enumerate}
+\item{Navigation Subsystem}
+	\begin{enumerate}
+	\item{Get Current Location}
+	\begin{table}[]
+	\centering
+	
+		\begin{tabular}{ | m{15em} | m{15em}| } 
+		\hline
+		Preconditions: 							& The user must have an active account and must be within range of WiFi routers. \\
+		\hline
+		Actor: User 								&  System: Up Nav \\ 
+		\hline
+											& 0. The system  displays the user's Home page\\ 
+		\hline
+		1. The user selects the "Navigation" option			& 2. The system displays the Navigation page. \\
+		\hline
+		3. The user selects the "Get Current Location" option. 	& 4. The system determines the users current location. \\
+		\hline																
+											& 5. The system displays a map on which the users current location is presented. \\
+		\hline
+		Post Conditions: 							& The users location is determined and displayed. \\
+		\hline
+		\end{tabular}
+	\end{table}
 
-	\subsection{Manage Users}
-	\begin{tabular}{ | m{15em} | m{15em}| }
+	\item{Search Location}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| } 
+		\hline
+		Preconditions: 													& The user must have an active account \\
+		\hline
+		Actor: User 														&  System: Up Nav \\ 
+		\hline
+																	& 0. The system  displays the user's Home page\\ 
+		\hline
+		1. The user selects the "Navigation" option									& 2. The system displays the Navigation page. \\
+		\hline
+		3. The user selects the "Search Location" option.								& 4. The system displays a search bar on the screen. \\ 
+		\hline
+		5. The User enters a location which they would like to search for and press the search button		& 6. The system searches all the registered locations based on the search term entered by the user. \\
+		\hline
+																	& 7. The system displays a list of locations which matched the search criteria. \\
+		\hline
+		Post Conditions:													&Matching locations are returned to the user. If no buildings match the search criteria, an appropriate error message is displayed. \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{View Location Details}
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| } 
+		\hline
+		Preconditions                                                     					& The user must have an active account and a valid location must be selected on the map. \\ 
+		\hline
+		Actor: User                                                      					& System: Up Nav  \\ 
+		\hline
+                                                                 							& 0. The system displays a list of locations from the location search.  \\
+		 \hline
+		1. The user selects one of the locations from the provided list. 		& 2. The system retrieves information related to the location selected by the user. \\ 
+		\hline
+                                                                 							& 3. The system displays the location information. \\ 
+		\hline
+		Post conditions									& Relevant location details shown to user. \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{View Places of Interest}
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                             				& The user must have an active account and their current location must be known. \\ 
+		\hline
+		Actor: User                                              				& System: Up Nav \\
+		 \hline
+                                                          							& 0. The system displays the user's Home page. \\
+		\hline
+		1. The user selects the "Navigation" option				& 2. The system displays the Navigation page. \\
+		\hline
+		3. The user selects the "View Places of Interest" option. 		& 4. The system retrieves a list of general places of interest based on the user's location. \\ 
+		\hline
+                                                          							& 5. The system displays the places of interest to the user. \\ 
+		\hline
+		Post conditions								& Relevant location details shown to user. \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{Navigate to Location}
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline 
+		Preconditions                                                                                 						& The user must have an active account. The users current location must be known and the must have specified a destination through the search interface. \\ 
+		\hline
+		Actor: User                                                                                  						& System: Up Nav \\ 
+		\hline
+                                                                                             									& 0. The system displays the details of a location. \\ 
+		\hline
+		1. The user selects the "Navigate to Location" option                                        				& 2. The system displays a list of navigation preferences for the user to enable / disable, namely "Avoid Pedestrian Traffic" and "Disability Friendly Route". \\
+		\hline
+		3. The user selects their desired preferences.                                               				& 4. The system calculates a route based on the user's preferences. \\ 
+		\hline
+                                                                                            									& 5. The system marks the calculated route on the map and displays this map to the user. \\ 
+		\hline
+																	& 6. UC 1.6 View Pedestrian Traffic \\
+		\hline
+		Post conditions                                                                               						& The user is provided with directions from their current location to their desired destination \\ 
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{View Pedestrian Traffic}
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions													& Users must all have the NavUP app installed and must be registered in order for them to show up on the heat map. The current user must have selected the option to navigate to a location \\
+		\hline
+		Actor: User														& System: Up Nav \\
+		\hline
+																	& 0. The system scans the calculated route for other users. \\
+		\hline
+																	& 1. The system displays a heat map to indicate the amount of users along the selected route. \\
+		\hline
+		Post condition													& A heat map of the campus is displayed \\
+		\hline
+
+		\end{tabular}
+	\end{table}
+	\end{enumerate}
+
+\item{Location Sub-System}
+
+	\begin{enumerate}
+
+	\item{Save Location}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                    										& The user must be logged in to the system.  \\ 
+		\hline
+		Actor: User                                     										& System: Up Nav                                                                  \\ 
+		\hline
+                                               													& 0. The system displays the details of a location which was selected by the user \\
+		\hline
+		1. The user selects the "Save Location" option. 								& 2. The system adds the location to the "Saved Locations" list. \\
+		\hline
+                                                													& 3. The system notifies the user that the location has been saved. \\
+		\hline
+		Post condition                                   										& The location will be saved to the user's Saved Locations list \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{View Saved Locations}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                          										& The user must be logged in \\ 
+		\hline
+		Actor: User                                            										& System: Up Nav \\
+		\hline
+                                                       												& 0. The system displays the user's Home page. \\ 
+		\hline
+		1. The user selects the "Manage Locations" option								& 2. The system displays the Manage Locations page. \\
+		\hline
+		3. The user selects the "View Saved Locations" option.							& 4. The system retrieves a list of all the locations previously saved by the user. \\ 
+		\hline
+                                                      												& 5. The system displays a list of saved locations. \\
+		\hline
+		Post condition                                         		 								& None                                                                              \\
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{View History}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                   										& The user must be logged in \\ 
+		\hline
+		Actor: User                                    										& System: Up Nav \\ 
+		\hline
+                                               													& 0. The system displays the user's Home page. \\ 
+		\hline
+		1. The user selects the "Manage Locations" option								& 2. The system displays the Manage Locations page. \\
+		\hline
+		3. The user selects the "View History" option. 									& 4. The system retrieves a list of all the locations previously searched for by the user. \\ 
+		\hline
+                                               													& 5. The system displays a list of the user's history. \\
+		 \hline
+		Post condition                                 										& None \\ 
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{Share Location}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                                                                						& The user must select the "View Current Location" option \\ 
+		\hline
+		Actor: User                                                                                                						 	& System: Up Nav \\ 
+		\hline
+                                                                                                            									& 0. The system displays the user's current location. \\ 
+		\hline
+		1. The user selects the "Share Location" option.                                                            					& 2. The system displays a search bar to search for users. \\
+		\hline
+		3. The user enters the user name of the user they wish to send a location to and presses the search button. 	& 4. The system searches for the user based on the search term entered by the user. \\ 
+		\hline
+                                                                                                            									& 5. The system displays the search results. \\ 
+		\hline
+		6. The user selects the user which they would like to share their location with.                            			& 7. The system sends a location to the selected user. \\ 
+		\hline
+		Post condition                                                                                               						& The current user's location is sent to another user. \\ 
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{View Most Visited Locations}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                  											& The user must be logged in \\ 
+		\hline
+		Actor: User                                                  											& System: Up Nav \\ 
+		\hline
+                                                              														& 0. The system displays the user's Home page. \\ 
+		\hline
+		1. The user selects the "Manage Locations" option										& 1. The system displays the Manage Locations page. \\
+		\hline
+		3. The user selects the "View Most Visited Locations" option. 								& 3. The system retrieves a list of the user's visited locations ordered by frequency of navigation. \\ 
+		\hline
+                                                              														& 5. The system displays the list of visited locations to the user. \\ 
+		\hline
+		Post condition                                                											& The user's most visited locations are displayed \\ 
+		\hline
+		\end{tabular}
+	\end{table}
+	\end{enumerate}
+
+\item{User Account Management System}
+	\begin{enumerate}
+
+	\item{Create Profile}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       				& The user must not exist on the system \\ 				
+		\hline
+		Actor: User                                                       					& System: Up Nav \\ 			
+		\hline
+                                                                  							& 0. The system displays Login Page with a "Register" option. \\                                                           
+		 \hline
+		1. The user selects the "Register" option.					& 2.  The system displays a form for the user to complete their profile. \\				
+		\hline
+		3. The user fills in their profile details and selects the save option. 		& 4. The system saves the users profile details and notifies the user that their profile has been created. \\ 
+		\hline
+		Post condition                                                     				& The new user is registered on the system \\ 				
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{Login}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                    												& The user must be registered on the system \\ 
+		\hline
+		Actor: User                                     												& System: Up Nav \\ 
+		\hline
+                                               		 													& 0. The system displays the user's Login page. \\ 
+		\hline
+		1. The user enters their username and password. 										& 2. The system verifies the credentials entered by the user. \\
+		\hline
+                                                															& 3. The system logs the user in and displays the user's home page. \\
+		\hline
+		Post condition                                  												& The user is logged in to the system \\ 
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{Manage Profile}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       						& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       							& System: Up Nav \\ 			
+		\hline
+                                                                  									& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Manage Account" option.						& 2. The system displays the User Account Management page. \\
+		 \hline
+		3. The user selects the "Manage Profile" option. 						& 4.  The system displays a form which is populated by the users current profile details. \\
+		\hline
+		5a. The user edits their current details and selects the save option. 			& 6a. The system saves the users profile details and notifies the user that their details have been saved. \\ 
+		\hline
+		5b. The user selects the "Delete Profile" option.						& 6b The system prompts the user to confirm the deletion. \\
+		\hline
+		7b The user confirms the deletion.								& 8b. The system deletes the users profile and notifies the user that their profile has been deleted. \\
+		\hline
+		Post condition                                                     						& None \\ 			
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{Create Timetable}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       				& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       					& System: Up Nav \\ 			
+		\hline
+                                                                  							& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Manage Account" option.				& 2. The system displays the User Account Management page. \\
+		 \hline
+		3. The user selects the "Create Timetable" option. 				& 4.  The system displays a timetable for the user to complete. \\
+		\hline
+		5a. The user adds their lecture details on the timetable. 			& 6a. The system saves the timetable and notifies the user that their timetable has been saved. \\ 
+		\hline
+		Post condition                                                     				& A new timetable is created for the user. \\ 			
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{Manage Timetable}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       				& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       					& System: Up Nav \\ 			
+		\hline
+                                                                  							& 0. The system displays the user's home page. \\                                                           
+		 \hline
+		1. The user selects the "Manage Account" option.				& 2. The system displays the User Account Management page. \\
+		 \hline
+		3. The user selects the "Manage Timetable" option. 				& 4.  The system displays the user's current timetable. \\
+		\hline
+		5a. The user edits their current timetable and selects the save option. 	& 6a. The system saves the users timetable and notifies the user that their timetable have been saved. \\ 
+		\hline
+		5b. The user selects the "Delete Timetable"  option.				&6b. The system deletes the user's timetable  and notifies the user that their timetable has been deleted. \\
+		\hline
+		Post condition                                                     				& The user's timetable is edited or deleted \\ 			
+		\hline
+		\end{tabular}
+	\end{table}
+	\end{enumerate}
+
+\item{Entertainment Sub-System}
+
+	\begin{enumerate}
+
+	\item{View Events}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       				& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       					& System: Up Nav \\ 			
+		\hline
+                                                                  							& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Entertainment" option.				& 2. The system displays the Entertainment  page. \\
+		 \hline
+		3. The user selects the "View Events" option. 					& 4.  The system retrieves a list of all scheduled events . \\
+		\hline
+													& 5. The system displays the list of events. \\
+		\hline
+		Post condition                                                     				& A list of all events is displayed to the user \\ 			
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{Save Event}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       				& The user has selected the View Events option \\ 				
+		\hline
+		Actor: User                                                       					& System: Up Nav \\ 			
+		\hline
+                                                                  							& 0. The system displays the list of all scheduled events. \\                                                           
+		 \hline
+		1. The user selects an event from the list.					& 2. The system displays the details of the event selected by the user. \\
+		 \hline
+		3. The user selects the "Save Event" option. 					& 4.  The system saves the event on the user's "Upcoming Events" list and notifies the user that the event has been saved . \\
+		\hline
+		Post condition                                                     				& An event is saved on the user's Upcoming Events list \\ 			
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{Delete Event}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       											& None \\ 				
+		\hline
+		Actor: User                                                       												& System: Up Nav \\ 			
+		\hline
+                                                                  														& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Entertainment" option.											& 2. The system displays the Entertainment  page. \\
+		 \hline
+		3. The user selects the "Manage Events" option. 											& 4.  The system retrieves a list of all the user's "Upcoming  Events" . \\
+		\hline
+		5. The user selects an event from their Upcoming Events list that they wish to delete.						& 6. The system prompts the user to confirm the deletion. \\
+		\hline
+		7. The user confirms the deletion														& 8. The system removes the event from their Upcoming Events list \\
+		\hline
+		Post condition                                                     											& An event is removed from the user's Upcoming Event list \\ 			
+		\hline
+		\end{tabular}
+	\end{table}
+	\end{enumerate}
+
+\item{Achievements Subsystem}
+
+	\begin{enumerate}
+
+	\item{Set Goal}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       										& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       											& System: Up Nav \\ 			
+		\hline
+                                                                  													& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Achievements" option.										& 2. The system displays the Achievements  page. \\
+		 \hline
+		3. The user selects the "Set Goals" option. 											& 4.  The system displays a form with the fields "Number of Steps" and "Deadline" . \\
+		\hline
+		5. The user fills in the form and selects the save option.									& 6. The system saves the user's goal and notifies the user that their goal has been saved. \\
+		\hline
+		Post condition                                                     										& A new goal is created \\ 			
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{View Leader board}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       										& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       											& System: Up Nav \\ 			
+		\hline
+                                                                  													& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Achievements" option.										& 2. The system displays the Achievements  page. \\
+		 \hline
+		3. The user selects the "View Leader board" option. 										& 4.  The system displays the leader board" . \\
+		\hline
+		Post condition                                                     										& The leader board is displayed \\ 			
+		\hline
+		\end{tabular}
+	\end{table}
+
+	\item{Challenge a Friend}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       										& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       											& System: Up Nav \\ 			
+		\hline
+                                                                  													& 0. The system displays the user's home page. \\                                                           
+		 \hline
+		1. The user selects the "Achievements" option.										& 2. The system displays the Achievements  page. \\
+		 \hline
+		3. The user selects the "Challenge a Friend" option. 										& 4.  The system displays a form with the fields "Number of Steps" and "Deadline" . \\
+		\hline
+		5. The user fills in the form and selects the submit option.									& 6. The system displays a search bar.\\
+		\hline
+		7. The user enters the username of the user they wish to challenge and selects the search option			& 8. The system searches for the user based on the username provided and returns a list of search results. \\
+		\hline
+		9. The user selects a user from the search results.										&10. The system sends a notification to the selected user informing them of the challenge, and the current user is notified that their challenge has been issued \\
+		\hline
+		Precondition																& A challenge is issued to another user. \\
+		\hline
+		\end{tabular}
+	\end{table}
+	\end{enumerate}
+
+\item{Administration Sub-System}
+
+	\begin{enumerate}
+
+	\item{Manage Users}
+
+	\begin{table}[]
+	\centering	
+		\begin{tabular}{ | m{15em} | m{15em}| }
 		\hline
 		Preconditions                                                       										& The current user must be an administrator \\ 				
 		\hline
@@ -987,10 +972,14 @@
 		\hline
 		Post condition															& A user's account is edited or deleted \\
 		\hline
-	\end{tabular}
+		\end{tabular}
+	\end{table}
 
-	\subsection{Manage Locations}
-	\begin{tabular}{ | m{15em} | m{15em}| }
+	\item{Manage Locations}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
 		\hline
 		Preconditions                                                       										& The current user must be an administrator \\ 				
 		\hline
@@ -1010,10 +999,14 @@
 		\hline
 		Post condition															& A location's details are edited \\
 		\hline
-	\end{tabular}
+		\end{tabular}
+	\end{table}
 
-	\subsection{Manage Events}
-	\begin{tabular}{ | m{15em} | m{15em}| }
+	\item{Manage Events}
+
+	\begin{table}[]
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
 		\hline
 		Preconditions                                                       										& The current user must be an administrator \\ 				
 		\hline
@@ -1045,29 +1038,11 @@
 		\hline
 		Post condition															& An event is created, edited or deleted. \\
 		\hline
-	\end{tabular}
-	
-			\begin{table}[]
- \centering
- \caption{Administration Subsystem Traceability Matrix}
- \label{my-label}
- \begin{tabular}{cc|c|c|c|c|}
- \cline{3-6}
-                                   &          & \multicolumn{4}{c|}{Use Cases} \\ \hline
- \multicolumn{1}{|c|}{Requirement} & Priority & 6.1    & 6.2   & 6.3   & 6.4   \\ \hline
- \multicolumn{1}{|c|}{FR-1}        & 1        &        &       &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-2}        & 5        &        &       &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-3}        & 7        &        &       &       & X     \\ \hline
- \multicolumn{1}{|c|}{FR-4}        & 8        &        & X     &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-5}        & 2        & X      &       &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-6}        & 4        &        &       & X     &       \\ \hline
- \multicolumn{1}{|c|}{FR-7}        & 3        &        & X     &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-8}        & 6        &        &       & X     &       \\ \hline
- \multicolumn{2}{|c|}{Use Case Priority}      & 2      & 1     & 3     & 1     \\ \hline
- \end{tabular}
- \end{table}
+		\end{tabular}
+	\end{table}
 	\end{enumerate}
-	
+\end{enumerate}
+\end{center}
 	
 	\subsection{Performance Requirements}
 	Not relevant
