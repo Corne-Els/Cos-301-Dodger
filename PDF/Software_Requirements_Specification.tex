@@ -959,6 +959,94 @@
  \end{tabular}
  \end{table}
 	\item \underline{Administration Subsystem}
+	
+	\section{Administration Sub-System}
+
+	\subsection{Manage Users}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       										& The current user must be an administrator \\ 				
+		\hline
+		Actor: Administrator                                                       									& System: Up Nav \\ 			
+		\hline
+                                                                  													& 0. The system displays the Administration home page. \\                                                           
+		 \hline
+		1. The administrator selects the "Manage User" option.									& 2. The system displays a search bar. \\
+		\hline							
+		3. The administrator enters the username of the user they wish to manage and selects the search option.		& 4. The system searches for users based on the username provided and returns a list of search results. \\
+		 \hline
+		5. The administrator selects a user from the search results. 									& 6.  The system displays the selected user's details with Edit User and Delete User options. \\
+		\hline
+		7a. The administrator selects the option to edit the user's account details							& 8a. The system displays a form populated with the user's details.\\
+		\hline
+		9a. The administrator edits the details which he/she is authorised to edit and saves the changes.			& 10a. The system saves the changes made to the user's account and notifies the administrator that the changes have been made successfully. \\
+		\hline
+		7b. The administrator selects the option to delete the user.									& 8b. The system displays a confirmation massage for the administrator to confirm the deletion. \\
+		\hline
+		10b. The administrator confirms the deletion.											& 10b. The system removes the user's account and notifies the administrator of the successful removal. \\
+		\hline
+		Post condition															& A user's account is edited or deleted \\
+		\hline
+	\end{tabular}
+
+	\subsection{Manage Locations}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       										& The current user must be an administrator \\ 				
+		\hline
+		Actor: Administrator                                                       									& System: Up Nav \\ 			
+		\hline
+                                                                  													& 0. The system displays the Administration home page. \\                                                           
+		 \hline
+		1. The administrator selects the "Manage Locations" option.									& 2. The system displays a search bar. \\
+		\hline							
+		3. The administrator enters the name of the location they wish to manage and selects the search option.		& 4. The system searches for location based on the name provided and returns a list of search results. \\
+		 \hline
+		5. The administrator selects a location from the search results. 								& 6. The system displays the selected location details . \\
+		\hline
+		7. The administrator selects the option to edit the location details								& 8. The system displays a form populated with the location details.\\
+		\hline
+		9. The administrator edits the details which he/she is authorised to edit and saves the changes.			& 10. The system saves the changes made to the location and notifies the administrator that the changes have been made successfully. \\
+		\hline
+		Post condition															& A location's details are edited \\
+		\hline
+	\end{tabular}
+
+	\subsection{Manage Events}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       										& The current user must be an administrator \\ 				
+		\hline
+		Actor: Administrator                                                       									& System: Up Nav \\ 			
+		\hline
+                                                                  													& 0. The system displays the Administration home page. \\                                                           
+		 \hline
+		1. The administrator selects the "Manage Events" option.									& 2. The system displays the Manage Events page with the Add Event, Edit Event and Delete Event options. \\
+		\hline							
+		3a. The administrator selects the Add Event option.										& 4a. The system displays a form with fields to enter event details. \\
+		 \hline
+		5a. The administrator enters the event details and selects the submit option. 						& 6a.  The system creates a new event and notifies the administrator that a new event has been created . \\
+		\hline
+		3b. The administrator selects Edit Event Option										& 4b. The system displays a search bar.\\
+		\hline
+		5b. The administrator enters the name of the event they wish to edit.							& 6b. The system searches for the event based on the name provided and returns a list of search results. \\
+		\hline
+		7b. The administrator selects an event from the search results.								& 8b. The system displays a form populated with the details of the selected event. \\
+		\hline
+		9b. The administrator edits the event details and selects the save option.						& 10b. The system saves the changes made to the event and notifies the administrator that the changes have been saved. \\
+		\hline
+		3c. The administrator selects Delete Event Option										& 4c. The system displays a search bar.\\
+		\hline
+		5c. The administrator enters the name of the event they wish to delete.							& 6c. The system searches for the event based on the name provided and returns a list of search results. \\
+		\hline
+		7c. The administrator selects an event from the search results.								& 8c. The system prompts the administrator to confirm the deletion. \\
+		\hline
+		9c. The administrator confirms the deletion.											& 10c. The system deletes the event and notifies the administrator of the successful deletion. \\
+		\hline
+		Post condition															& An event is created, edited or deleted. \\
+		\hline
+	\end{tabular}
+	
 			\begin{table}[]
  \centering
  \caption{Administration Subsystem Traceability Matrix}
