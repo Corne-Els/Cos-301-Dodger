@@ -312,6 +312,123 @@
 \end{tabular}
 \end{table}
 
+\section{Location Sub-System}
+
+	\subsection{Save Location}
+
+	\centering
+
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                    										& The user must be logged in to the system.  \\ 
+		\hline
+		Actor: User                                     										& System: Up Nav                                                                  \\ 
+		\hline
+                                               													& 0. The system displays the details of a location which was selected by the user \\
+		\hline
+		1. The user selects the "Save Location" option. 								& 2. The system adds the location to the "Saved Locations" list. \\
+		\hline
+                                                													& 3. The system notifies the user that the location has been saved. \\
+		\hline
+		Post condition                                   										& The location will be saved to the user's Saved Locations list \\
+		\hline
+	\end{tabular}
+	
+	\subsection{View Saved Locations}
+
+	\centering
+
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                          										& The user must be logged in \\ 
+		\hline
+		Actor: User                                            										& System: Up Nav \\
+		\hline
+                                                       												& 0. The system displays the user's Home page. \\ 
+		\hline
+		1. The user selects the "Manage Locations" option								& 2. The system displays the Manage Locations page. \\
+		\hline
+		3. The user selects the "View Saved Locations" option.							& 4. The system retrieves a list of all the locations previously saved by the user. \\ 
+		\hline
+                                                      												& 5. The system displays a list of saved locations. \\
+		\hline
+		Post condition                                         		 								& None                                                                              \\
+		\hline
+	\end{tabular}
+
+
+	\subsection{View History}
+
+	\centering
+
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                   										& The user must be logged in \\ 
+		\hline
+		Actor: User                                    										& System: Up Nav \\ 
+		\hline
+                                               													& 0. The system displays the user's Home page. \\ 
+		\hline
+		1. The user selects the "Manage Locations" option								& 2. The system displays the Manage Locations page. \\
+		\hline
+		3. The user selects the "View History" option. 									& 4. The system retrieves a list of all the locations previously searched for by the user. \\ 
+		\hline
+                                               													& 5. The system displays a list of the user's history. \\
+		 \hline
+		Post condition                                 										& None \\ 
+		\hline
+	\end{tabular}
+	
+
+	\subsection{Share Location}
+
+	\centering
+
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                                                                						& The user must select the "View Current Location" option \\ 
+		\hline
+		Actor: User                                                                                                						 	& System: Up Nav \\ 
+		\hline
+                                                                                                            									& 0. The system displays the user's current location. \\ 
+		\hline
+		1. The user selects the "Share Location" option.                                                            					& 2. The system displays a search bar to search for users. \\
+		\hline
+		3. The user enters the user name of the user they wish to send a location to and presses the search button. 	& 4. The system searches for the user based on the search term entered by the user. \\ 
+		\hline
+                                                                                                            									& 5. The system displays the search results. \\ 
+		\hline
+		6. The user selects the user which they would like to share their location with.                            			& 7. The system sends a location to the selected user. \\ 
+		\hline
+		Post condition                                                                                               						& The current user's location is sent to another user. \\ 
+		\hline
+
+	\end{tabular}
+
+
+	\subsection{View Most Visited Locations}
+
+	\centering
+
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                  											& The user must be logged in \\ 
+		\hline
+		Actor: User                                                  											& System: Up Nav \\ 
+		\hline
+                                                              														& 0. The system displays the user's Home page. \\ 
+		\hline
+		1. The user selects the "Manage Locations" option										& 1. The system displays the Manage Locations page. \\
+		\hline
+		3. The user selects the "View Most Visited Locations" option. 								& 3. The system retrieves a list of the user's visited locations ordered by frequency of navigation. \\ 
+		\hline
+                                                              														& 5. The system displays the list of visited locations to the user. \\ 
+		\hline
+		Post condition                                                											& The user's most visited locations are displayed \\ 
+		\hline
+	\end{tabular}
+
+
 \begin{table}[]
 \centering
 \caption{Location Management Subsystem Traceability Matrix}
