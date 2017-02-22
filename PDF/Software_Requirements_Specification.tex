@@ -449,6 +449,113 @@
 \end{tabular}
 \end{table}
 
+\section{User Account Management System}
+
+	\subsection{Create Profile}
+
+	\centering
+
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       				& The user must not exist on the system \\ 				
+		\hline
+		Actor: User                                                       					& System: Up Nav \\ 			
+		\hline
+                                                                  							& 0. The system displays Login Page with a "Register" option. \\                                                           
+		 \hline
+		1. The user selects the "Register" option.					& 2.  The system displays a form for the user to complete their profile. \\				
+		\hline
+		3. The user fills in their profile details and selects the save option. 		& 4. The system saves the users profile details and notifies the user that their profile has been created. \\ 
+		\hline
+		Post condition                                                     				& The new user is registered on the system \\ 				
+		\hline
+	\end{tabular}
+
+	\subsection{Login}
+	
+	\centering
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                    												& The user must be registered on the system \\ 
+		\hline
+		Actor: User                                     												& System: Up Nav \\ 
+		\hline
+                                               		 													& 0. The system displays the user's Login page. \\ 
+		\hline
+		1. The user enters their username and password. 										& 2. The system verifies the credentials entered by the user. \\
+		\hline
+                                                															& 3. The system logs the user in and displays the user's home page. \\
+		\hline
+		Post condition                                  												& The user is logged in to the system \\ 
+		\hline
+	\end{tabular}
+
+
+	\subsection{Manage Profile}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       						& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       							& System: Up Nav \\ 			
+		\hline
+                                                                  									& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Manage Account" option.						& 2. The system displays the User Account Management page. \\
+		 \hline
+		3. The user selects the "Manage Profile" option. 						& 4.  The system displays a form which is populated by the users current profile details. \\
+		\hline
+		5a. The user edits their current details and selects the save option. 			& 6a. The system saves the users profile details and notifies the user that their details have been saved. \\ 
+		\hline
+		5b. The user selects the "Delete Profile" option.						& 6b The system prompts the user to confirm the deletion. \\
+		\hline
+		7b The user confirms the deletion.								& 8b. The system deletes the users profile and notifies the user that their profile has been deleted. \\
+		\hline
+		Post condition                                                     						& None \\ 			
+		\hline
+	\end{tabular}
+
+	\subsection{Create Timetable}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       				& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       					& System: Up Nav \\ 			
+		\hline
+                                                                  							& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Manage Account" option.				& 2. The system displays the User Account Management page. \\
+		 \hline
+		3. The user selects the "Create Timetable" option. 				& 4.  The system displays a timetable for the user to complete. \\
+		\hline
+		5a. The user adds their lecture details on the timetable. 			& 6a. The system saves the timetable and notifies the user that their timetable has been saved. \\ 
+		\hline
+		Post condition                                                     				& A new timetable is created for the user. \\ 			
+		\hline
+	\end{tabular}
+
+	\subsection{Manage Timetable}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       				& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       					& System: Up Nav \\ 			
+		\hline
+                                                                  							& 0. The system displays the user's home page. \\                                                           
+		 \hline
+		1. The user selects the "Manage Account" option.				& 2. The system displays the User Account Management page. \\
+		 \hline
+		3. The user selects the "Manage Timetable" option. 				& 4.  The system displays the user's current timetable. \\
+		\hline
+		5a. The user edits their current timetable and selects the save option. 	& 6a. The system saves the users timetable and notifies the user that their timetable have been saved. \\ 
+		\hline
+		5b. The user selects the "Delete Timetable"  option.				&6b. The system deletes the user's timetable  and notifies the user that their timetable has been deleted. \\
+		\hline
+		Post condition                                                     				& The user's timetable is edited or deleted \\ 			
+		\hline
+	\end{tabular}
+
+
+
 \begin{table}
 \centering
 \caption{User Account Management Subsystem Traceability Matrix}
