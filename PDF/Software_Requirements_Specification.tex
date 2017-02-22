@@ -170,6 +170,128 @@
 		\includegraphics[scale=0.5]{Navigation_Subsystem.png}
 		\caption{Navigation Subsystem}	
 	\end{figure}
+	
+	\subsection{Get Current Location}
+	
+	\begin{tabular}{ | m{15em} | m{15em}| } 
+		\hline
+		Preconditions: 							& The user must have an active account and must be within range of WiFi routers. \\
+		\hline
+		Actor: User 								&  System: Up Nav \\ 
+		\hline
+											& 0. The system  displays the user's Home page\\ 
+		\hline
+		1. The user selects the "Navigation" option			& 2. The system displays the Navigation page. \\
+		\hline
+		3. The user selects the "Get Current Location" option. 	& 4. The system determines the users current location. \\
+		\hline																
+											& 5. The system displays a map on which the users current location is presented. \\
+		\hline
+		Post Conditions: 							& The users location is determined and displayed. \\
+		\hline
+	\end{tabular}
+
+	\subsection{Search Location}
+	\begin{tabular}{ | m{15em} | m{15em}| } 
+		\hline
+		Preconditions: 													& The user must have an active account \\
+		\hline
+		Actor: User 														&  System: Up Nav \\ 
+		\hline
+																	& 0. The system  displays the user's Home page\\ 
+		\hline
+		1. The user selects the "Navigation" option									& 2. The system displays the Navigation page. \\
+		\hline
+		3. The user selects the "Search Location" option.								& 4. The system displays a search bar on the screen. \\ 
+		\hline
+		5. The User enters a location which they would like to search for and press the search button		& 6. The system searches all the registered locations based on the search term entered by the user. \\
+		\hline
+																	& 7. The system displays a list of locations which matched the search criteria. \\
+		\hline
+		Post Conditions:													&Matching locations are returned to the user. If no buildings match the search criteria, an appropriate error message is displayed. \\
+		\hline
+	\end{tabular}
+
+	\subsection{View Location Details}
+	
+		\begin{tabular}{ | m{15em} | m{15em}| } 
+		\hline
+		Preconditions                                                     					& The user must have an active account and a valid location must be selected on the map. \\ 
+		\hline
+		Actor: User                                                      					& System: Up Nav  \\ 
+		\hline
+                                                                 							& 0. The system displays a list of locations from the location search.  \\
+		 \hline
+		1. The user selects one of the locations from the provided list. 		& 2. The system retrieves information related to the location selected by the user. \\ 
+		\hline
+                                                                 							& 3. The system displays the location information. \\ 
+		\hline
+		Post conditions									& Relevant location details shown to user. \\
+		\hline
+		\end{tabular}
+
+	\subsection{View Places of Interest}
+	
+	\centering
+		\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                             				& The user must have an active account and their current location must be known. \\ 
+		\hline
+		Actor: User                                              				& System: Up Nav \\
+		 \hline
+                                                          							& 0. The system displays the user's Home page. \\
+		\hline
+		1. The user selects the "Navigation" option				& 2. The system displays the Navigation page. \\
+		\hline
+		3. The user selects the "View Places of Interest" option. 		& 4. The system retrieves a list of general places of interest based on the user's location. \\ 
+		\hline
+                                                          							& 5. The system displays the places of interest to the user. \\ 
+		\hline
+		Post conditions								& Relevant location details shown to user. \\
+		\hline
+		\end{tabular}
+
+	\subsection{Navigate to Location}
+
+	\centering
+
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline 
+		Preconditions                                                                                 						& The user must have an active account. The users current location must be known and the must have specified a destination through the search interface. \\ 
+		\hline
+		Actor: User                                                                                  						& System: Up Nav \\ 
+		\hline
+                                                                                             									& 0. The system displays the details of a location. \\ 
+		\hline
+		1. The user selects the "Navigate to Location" option                                        				& 2. The system displays a list of navigation preferences for the user to enable / disable, namely "Avoid Pedestrian Traffic" and "Disability Friendly Route". \\
+		\hline
+		3. The user selects their desired preferences.                                               				& 4. The system calculates a route based on the user's preferences. \\ 
+		\hline
+                                                                                            									& 5. The system marks the calculated route on the map and displays this map to the user. \\ 
+		\hline
+																	& 6. UC 1.6 View Pedestrian Traffic \\
+		\hline
+		Post conditions                                                                               						& The user is provided with directions from their current location to their desired destination \\ 
+		\hline
+	\end{tabular}
+	
+	\subsection{View Pedestrian Traffic}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions													& Users must all have the NavUP app installed and must be registered in order for them to show up on the heat map. The current user must have selected the option to navigate to a location \\
+		\hline
+		Actor: User														& System: Up Nav \\
+		\hline
+																	& 0. The system scans the calculated route for other users. \\
+		\hline
+																	& 1. The system displays a heat map to indicate the amount of users along the selected route. \\
+		\hline
+		Post condition													& A heat map of the campus is displayed \\
+		\hline
+
+	\end{tabular}
+
+	
 	\begin{table}[h!]
 \centering
 \caption{Navigation Subsystem Traceability Matrix}
