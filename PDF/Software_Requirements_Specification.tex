@@ -816,7 +816,64 @@
 		\caption{Navigation Subsystem}	
 	\end{figure}	
 	
+	\section{Entertainment Sub-System}
 	
+	\subsection{View Events}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       				& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       					& System: Up Nav \\ 			
+		\hline
+                                                                  							& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Entertainment" option.				& 2. The system displays the Entertainment  page. \\
+		 \hline
+		3. The user selects the "View Events" option. 					& 4.  The system retrieves a list of all scheduled events . \\
+		\hline
+													& 5. The system displays the list of events. \\
+		\hline
+		Post condition                                                     				& A list of all events is displayed to the user \\ 			
+		\hline
+	\end{tabular}
+	
+	\subsection{Save Event}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       				& The user has selected the View Events option \\ 				
+		\hline
+		Actor: User                                                       					& System: Up Nav \\ 			
+		\hline
+                                                                  							& 0. The system displays the list of all scheduled events. \\                                                           
+		 \hline
+		1. The user selects an event from the list.					& 2. The system displays the details of the event selected by the user. \\
+		 \hline
+		3. The user selects the "Save Event" option. 					& 4.  The system saves the event on the user's "Upcoming Events" list and notifies the user that the event has been saved . \\
+		\hline
+		Post condition                                                     				& An event is saved on the user's Upcoming Events list \\ 			
+		\hline
+	\end{tabular}
+
+	\subsection{Delete Event}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       											& None \\ 				
+		\hline
+		Actor: User                                                       												& System: Up Nav \\ 			
+		\hline
+                                                                  														& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Entertainment" option.											& 2. The system displays the Entertainment  page. \\
+		 \hline
+		3. The user selects the "Manage Events" option. 											& 4.  The system retrieves a list of all the user's "Upcoming  Events" . \\
+		\hline
+		5. The user selects an event from their Upcoming Events list that they wish to delete.						& 6. The system prompts the user to confirm the deletion. \\
+		\hline
+		7. The user confirms the deletion														& 8. The system removes the event from their Upcoming Events list \\
+		\hline
+		Post condition                                                     											& An event is removed from the user's Upcoming Event list \\ 			
+		\hline
+	\end{tabular}
 	
 	\item \underline{Achievements Subsystem}
 	\begin{table}[]
