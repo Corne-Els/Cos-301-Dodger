@@ -876,6 +876,69 @@
 	\end{tabular}
 	
 	\item \underline{Achievements Subsystem}
+	
+		\section{Achievements}
+
+	\subsection{Set Goal}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       										& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       											& System: Up Nav \\ 			
+		\hline
+                                                                  													& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Achievements" option.										& 2. The system displays the Achievements  page. \\
+		 \hline
+		3. The user selects the "Set Goals" option. 											& 4.  The system displays a form with the fields "Number of Steps" and "Deadline" . \\
+		\hline
+		5. The user fills in the form and selects the save option.									& 6. The system saves the user's goal and notifies the user that their goal has been saved. \\
+		\hline
+		Post condition                                                     										& A new goal is created \\ 			
+		\hline
+	\end{tabular}
+
+	\subsection{View Leader board}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       										& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       											& System: Up Nav \\ 			
+		\hline
+                                                                  													& 0. The system displays the user's Home page. \\                                                           
+		 \hline
+		1. The user selects the "Achievements" option.										& 2. The system displays the Achievements  page. \\
+		 \hline
+		3. The user selects the "View Leader board" option. 										& 4.  The system displays the leader board" . \\
+		\hline
+		Post condition                                                     										& The leader board is displayed \\ 			
+		\hline
+	\end{tabular}
+	
+
+	\subsection{Challenge a Friend}
+	\begin{tabular}{ | m{15em} | m{15em}| }
+		\hline
+		Preconditions                                                       										& The user must be logged in \\ 				
+		\hline
+		Actor: User                                                       											& System: Up Nav \\ 			
+		\hline
+                                                                  													& 0. The system displays the user's home page. \\                                                           
+		 \hline
+		1. The user selects the "Achievements" option.										& 2. The system displays the Achievements  page. \\
+		 \hline
+		3. The user selects the "Challenge a Friend" option. 										& 4.  The system displays a form with the fields "Number of Steps" and "Deadline" . \\
+		\hline
+		5. The user fills in the form and selects the submit option.									& 6. The system displays a search bar.\\
+		\hline
+		7. The user enters the username of the user they wish to challenge and selects the search option			& 8. The system searches for the user based on the username provided and returns a list of search results. \\
+		\hline
+		9. The user selects a user from the search results.										&10. The system sends a notification to the selected user informing them of the challenge, and the current user is notified that their challenge has been issued \\
+		\hline
+		Precondition																& A challenge is issued to another user. \\
+		\hline
+	\end{tabular}
+	
 	\begin{table}[]
  \centering
  \caption{Achievements Subsystem Traceability Matrix}
