@@ -1,5 +1,7 @@
 \documentclass{article}
+\usepackage[margin=2.5cm,left=2cm,includefoot]{geometry}
 \usepackage{enumitem}
+ \usepackage{float}
  
  \newlist{FR}{enumerate}{1}
  \setlist[FR]{label=FR-\arabic*:}
@@ -167,7 +169,7 @@
 			\item \textbf{Postcondition:} A heatmap of the campus is displayed. 
 		\end{enumerate}
 	\end{enumerate}
-	\begin{figure}[h!]
+	\begin{figure}[H]
 		\includegraphics[scale=0.5]{Navigation_Subsystem.png}
 		\caption{Navigation Subsystem}	
 	\end{figure}
@@ -192,69 +194,7 @@
 \multicolumn{2}{|c|}{\textbf{Use Case Priority}}               & 1    & 3    & 4    & 6    & 2    & 5    \\ \hline
 \end{tabular}
 \end{table}
-
-
-
-\begin{table}[]
-\centering
-\caption{Location Management Subsystem Traceability Matrix}
-\label{my-label}
-\begin{tabular}{cc|c|c|c|c|c|}
-\cline{3-7}
-                                           &                   & \multicolumn{5}{c|}{\textbf{Use Cases}} \\ \hline
-\multicolumn{1}{|c|}{\textbf{Requirement}} & \textbf{Priority} & 2.1    & 2.2    & 2.3   & 2.4   & 2.5   \\ \hline
-\multicolumn{1}{|c|}{FR-1}                 & 1                 &        & X      & X     &       & X     \\ \hline
-\multicolumn{1}{|c|}{FR-2}                 & 5                 &        &        &       &       &       \\ \hline
-\multicolumn{1}{|c|}{FR-3}                 & 7                 & X      &        &       &       & X     \\ \hline
-\multicolumn{1}{|c|}{FR-4}                 & 8                 &        &        &       & X     &       \\ \hline
-\multicolumn{1}{|c|}{FR-5}                 & 2                 &        &        &       &       &       \\ \hline
-\multicolumn{1}{|c|}{FR-6}                 & 4                 &        &        &       &       &       \\ \hline
-\multicolumn{1}{|c|}{FR-7}                 & 3                 & X      & X      &       & X     &       \\ \hline
-\multicolumn{1}{|c|}{FR-8}                 & 6                 &        &        & X     &       &       \\ \hline
-\multicolumn{2}{|c|}{\textbf{Use Case Priority}}               & 1      & 4      & 5     & 2     & 3     \\ \hline
-\end{tabular}
-\end{table}
-
-
-\begin{table}
-\centering
-\caption{User Account Management Subsystem Traceability Matrix}
-\label{my-label}
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline
-\multicolumn{2}{|c|}{}                           & \multicolumn{5}{c|}{\textbf{Use Cases}}                                  \\ \hline
-\textbf{Requirement}     & \textbf{Priority}     & \textbf{2.1} & \textbf{2.2} & \textbf{2.3} & \textbf{2.4} & \textbf{2.5} \\ \hline
-\textbf{FR-1}            & \textbf{1}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
-\textbf{FR-2}            & \textbf{5}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
-\textbf{FR-3}            & \textbf{7}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
-\textbf{FR-4}            & \textbf{8}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
-\textbf{FR-5}            & \textbf{2}            & \textbf{X}   & \textbf{X}   & \textbf{X}   & \textbf{}    & \textbf{}    \\ \hline
-\textbf{FR-6}            & \textbf{4}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{X}   & \textbf{X}   \\ \hline
-\textbf{FR-7}            & \textbf{3}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
-\textbf{FR-8}            & \textbf{6}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
-\multicolumn{2}{|c|}{\textbf{Use Case Priority}} & \textbf{1}   & \textbf{2}   & \textbf{3}   & \textbf{4}   & \textbf{5}   \\ \hline
-\end{tabular}
-\end{table}	
-
-\begin{table}[]
-\centering
-\caption{Entertainment Subsystem Traceability Matrix}
-\label{my-label}
-\begin{tabular}{|c|c|c|c|c|l|l|}
-\hline
-\multicolumn{2}{|c|}{}                           & \multicolumn{5}{c|}{\textbf{Use Cases}}                           \\ \hline
-\textbf{Requirement}     & \textbf{Priority}     & \textbf{4.1}  & \textbf{4.2}  & \multicolumn{3}{c|}{\textbf{4.3}} \\ \hline
-\textbf{FR-1}            & \textbf{1}            & \textbf{X}    & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
-\textbf{FR-2}            & \textbf{5}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
-\textbf{FR-3}            & \textbf{7}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
-\textbf{FR-4}            & \textbf{8}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
-\textbf{FR-5}            & \textbf{2}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
-\textbf{FR-6}            & \textbf{4}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
-\textbf{FR-7}            & \textbf{3}            & \textbf{}     & \textbf{X}    & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
-\textbf{FR-8}            & \textbf{6}            & \textbf{X}    & \textbf{X}    & \multicolumn{3}{c|}{\textbf{X}}   \\ \hline
-\multicolumn{2}{|c|}{\textbf{Use Case Priority}} & \textbf{1}    & \textbf{2}    & \multicolumn{3}{c|}{\textbf{3}}   \\ \hline
-\end{tabular}
-\end{table}
+\newpage
 	
 	\item \underline{Location Management Subsystem}
 \begin{enumerate}
@@ -293,10 +233,30 @@
 			\item \textbf{Postcondition:} None.\newline
 		\end{enumerate}
 	\end{enumerate}
-	\begin{figure}[h!]
+	\begin{figure}[H]
 		\includegraphics[scale=0.5]{Location_Management.JPG}
 		\caption{Location Management Subsystem}	
 	\end{figure}
+	
+	\begin{table}[H]
+\centering
+\caption{Location Management Subsystem Traceability Matrix}
+\label{my-label}
+\begin{tabular}{cc|c|c|c|c|c|}
+\cline{3-7}
+                                           &                   & \multicolumn{5}{c|}{\textbf{Use Cases}} \\ \hline
+\multicolumn{1}{|c|}{\textbf{Requirement}} & \textbf{Priority} & 2.1    & 2.2    & 2.3   & 2.4   & 2.5   \\ \hline
+\multicolumn{1}{|c|}{FR-1}                 & 1                 &        & X      & X     &       & X     \\ \hline
+\multicolumn{1}{|c|}{FR-2}                 & 5                 &        &        &       &       &       \\ \hline
+\multicolumn{1}{|c|}{FR-3}                 & 7                 & X      &        &       &       & X     \\ \hline
+\multicolumn{1}{|c|}{FR-4}                 & 8                 &        &        &       & X     &       \\ \hline
+\multicolumn{1}{|c|}{FR-5}                 & 2                 &        &        &       &       &       \\ \hline
+\multicolumn{1}{|c|}{FR-6}                 & 4                 &        &        &       &       &       \\ \hline
+\multicolumn{1}{|c|}{FR-7}                 & 3                 & X      & X      &       & X     &       \\ \hline
+\multicolumn{1}{|c|}{FR-8}                 & 6                 &        &        & X     &       &       \\ \hline
+\multicolumn{2}{|c|}{\textbf{Use Case Priority}}               & 1      & 4      & 5     & 2     & 3     \\ \hline
+\end{tabular}
+\end{table}
 	
 	
 	\item \underline{User Account Management Subsystem}
@@ -336,10 +296,29 @@
 			\item \textbf{Postcondition:} Timetable is edited on the users profile.\newline
 		\end{enumerate}
 	\end{enumerate}
-	\begin{figure}[h!]
+	\begin{figure}[H]
 		\includegraphics[scale=0.5]{User_Account_Management.JPG}
 		\caption{User Account Management Subsystem}	
 	\end{figure}
+	\begin{table}[H]
+\centering
+\caption{User Account Management Subsystem Traceability Matrix}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{}                           & \multicolumn{5}{c|}{\textbf{Use Cases}}                                  \\ \hline
+\textbf{Requirement}     & \textbf{Priority}     & \textbf{2.1} & \textbf{2.2} & \textbf{2.3} & \textbf{2.4} & \textbf{2.5} \\ \hline
+\textbf{FR-1}            & \textbf{1}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-2}            & \textbf{5}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-3}            & \textbf{7}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-4}            & \textbf{8}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-5}            & \textbf{2}            & \textbf{X}   & \textbf{X}   & \textbf{X}   & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-6}            & \textbf{4}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{X}   & \textbf{X}   \\ \hline
+\textbf{FR-7}            & \textbf{3}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\textbf{FR-8}            & \textbf{6}            & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    & \textbf{}    \\ \hline
+\multicolumn{2}{|c|}{\textbf{Use Case Priority}} & \textbf{1}   & \textbf{2}   & \textbf{3}   & \textbf{4}   & \textbf{5}   \\ \hline
+\end{tabular}
+\end{table}	
 	
 	\item \underline{Entertainment Subsystem}
 			\begin{enumerate}
@@ -364,31 +343,31 @@
 			\item \textbf{Postcondition:} A saved event is deleted .\newline
 		\end{enumerate}
 	\end{enumerate}
-	\begin{figure}[h!]
+	\begin{figure}[H]
 		\includegraphics[scale=0.5]{Entertainment_Subsystem.png}
-		\caption{Navigation Subsystem}	
-	\end{figure}	
-	
-	\begin{table}[]
- \centering
- \caption{Achievements Subsystem Traceability Matrix}
- \label{my-label}
- \begin{tabular}{cc|c|c|c|c|}
- \cline{3-6}
-                                   &          & \multicolumn{4}{c|}{Use Cases} \\ \hline
- \multicolumn{1}{|c|}{Requirement} & Priority & 5.1    & 5.2   & 5.3   & 5.4   \\ \hline
- \multicolumn{1}{|c|}{FR-1}        & 1        &        &       &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-2}        & 5        &        &       &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-3}        & 7        & X      & X     &       & X     \\ \hline
- \multicolumn{1}{|c|}{FR-4}        & 8        & X      & X     & X     & X     \\ \hline
- \multicolumn{1}{|c|}{FR-5}        & 2        &        &       &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-6}        & 4        &        &       &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-7}        & 3        &        &       & X     &       \\ \hline
- \multicolumn{1}{|c|}{FR-8}        & 6        &        &       &       &       \\ \hline
- \multicolumn{2}{|c|}{Use Case Priority}      & 2      & 3     & 1     & 3     \\ \hline
- \end{tabular}
- \end{table} 
+		\caption{Entertainment Subsystem}	
+	\end{figure}
+	\begin{table}[H]
+\centering
+\caption{Entertainment Subsystem Traceability Matrix}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|c|l|l|}
+\hline
+\multicolumn{2}{|c|}{}                           & \multicolumn{5}{c|}{\textbf{Use Cases}}                           \\ \hline
+\textbf{Requirement}     & \textbf{Priority}     & \textbf{4.1}  & \textbf{4.2}  & \multicolumn{3}{c|}{\textbf{4.3}} \\ \hline
+\textbf{FR-1}            & \textbf{1}            & \textbf{X}    & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-2}            & \textbf{5}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-3}            & \textbf{7}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-4}            & \textbf{8}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-5}            & \textbf{2}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-6}            & \textbf{4}            & \textbf{}     & \textbf{}     & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-7}            & \textbf{3}            & \textbf{}     & \textbf{X}    & \multicolumn{3}{c|}{\textbf{}}    \\ \hline
+\textbf{FR-8}            & \textbf{6}            & \textbf{X}    & \textbf{X}    & \multicolumn{3}{c|}{\textbf{X}}   \\ \hline
+\multicolumn{2}{|c|}{\textbf{Use Case Priority}} & \textbf{1}    & \textbf{2}    & \multicolumn{3}{c|}{\textbf{3}}   \\ \hline
+\end{tabular}
+\end{table}	 
  
+ 		\item \underline{Achievements Subsystem}
  		\begin{enumerate}	
 			
 		\item Set Goals
@@ -423,33 +402,32 @@
 		\end{enumerate}			
 	\end{enumerate}	
 	
-	\begin{figure}[h!]
+	\begin{figure}[H]
 		\includegraphics[scale=0.5]{Achievements_Subsystem.jpg}
 		\caption{Achievements Subsystem}	
 	\end{figure}  
- 
-	\item \underline{Administration Subsystem}
-  
-			\begin{table}[]
+		\begin{table}[H]
  \centering
- \caption{Administration Subsystem Traceability Matrix}
+ \caption{Achievements Subsystem Traceability Matrix}
  \label{my-label}
  \begin{tabular}{cc|c|c|c|c|}
  \cline{3-6}
                                    &          & \multicolumn{4}{c|}{Use Cases} \\ \hline
- \multicolumn{1}{|c|}{Requirement} & Priority & 6.1    & 6.2   & 6.3   & 6.4   \\ \hline
+ \multicolumn{1}{|c|}{Requirement} & Priority & 5.1    & 5.2   & 5.3   & 5.4   \\ \hline
  \multicolumn{1}{|c|}{FR-1}        & 1        &        &       &       &       \\ \hline
  \multicolumn{1}{|c|}{FR-2}        & 5        &        &       &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-3}        & 7        &        &       &       & X     \\ \hline
- \multicolumn{1}{|c|}{FR-4}        & 8        &        & X     &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-5}        & 2        & X      &       &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-6}        & 4        &        &       & X     &       \\ \hline
- \multicolumn{1}{|c|}{FR-7}        & 3        &        & X     &       &       \\ \hline
- \multicolumn{1}{|c|}{FR-8}        & 6        &        &       & X     &       \\ \hline
- \multicolumn{2}{|c|}{Use Case Priority}      & 2      & 1     & 3     & 1     \\ \hline
+ \multicolumn{1}{|c|}{FR-3}        & 7        & X      & X     &       & X     \\ \hline
+ \multicolumn{1}{|c|}{FR-4}        & 8        & X      & X     & X     & X     \\ \hline
+ \multicolumn{1}{|c|}{FR-5}        & 2        &        &       &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-6}        & 4        &        &       &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-7}        & 3        &        &       & X     &       \\ \hline
+ \multicolumn{1}{|c|}{FR-8}        & 6        &        &       &       &       \\ \hline
+ \multicolumn{2}{|c|}{Use Case Priority}      & 2      & 3     & 1     & 3     \\ \hline
  \end{tabular}
  \end{table}
+ \newpage
  
+	\item \underline{Administration Subsystem}
 	\begin{enumerate}
 			
 		\item Manage Users
@@ -484,6 +462,29 @@
 		\end{enumerate}		
 		
 	\end{enumerate}
+	\begin{figure}[H]
+		\includegraphics[scale=0.5]{Administrator.jpg}
+		\caption{Administrator Subsystem}	
+	\end{figure} 
+				\begin{table}[H]
+ \centering
+ \caption{Administration Subsystem Traceability Matrix}
+ \label{my-label}
+ \begin{tabular}{cc|c|c|c|c|}
+ \cline{3-6}
+                                   &          & \multicolumn{4}{c|}{Use Cases} \\ \hline
+ \multicolumn{1}{|c|}{Requirement} & Priority & 6.1    & 6.2   & 6.3   & 6.4   \\ \hline
+ \multicolumn{1}{|c|}{FR-1}        & 1        &        &       &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-2}        & 5        &        &       &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-3}        & 7        &        &       &       & X     \\ \hline
+ \multicolumn{1}{|c|}{FR-4}        & 8        &        & X     &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-5}        & 2        & X      &       &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-6}        & 4        &        &       & X     &       \\ \hline
+ \multicolumn{1}{|c|}{FR-7}        & 3        &        & X     &       &       \\ \hline
+ \multicolumn{1}{|c|}{FR-8}        & 6        &        &       & X     &       \\ \hline
+ \multicolumn{2}{|c|}{Use Case Priority}      & 2      & 1     & 3     & 1     \\ \hline
+ \end{tabular}
+ \end{table}
 
 \begin{center}
 \subsection{Actor-System Interaction Modeling}
@@ -492,10 +493,10 @@
 \item{Navigation Subsystem}
 	\begin{enumerate}
 	\item{Get Current Location}
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
 	
-		\begin{tabular}{ | m{15em} | m{15em}| } 
+		\begin{tabular}{ | p{15em} | p{15em}| } 
 		\hline
 		Preconditions: 							& The user must have an active account and must be within range of WiFi routers. \\
 		\hline
@@ -516,9 +517,9 @@
 
 	\item{Search Location}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| } 
+		\begin{tabular}{ | p{15em} | p{15em}| } 
 		\hline
 		Preconditions: 													& The user must have an active account \\
 		\hline
@@ -540,9 +541,9 @@
 	\end{table}
 
 	\item{View Location Details}
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| } 
+		\begin{tabular}{ | p{15em} | p{15em}| } 
 		\hline
 		Preconditions                                                     					& The user must have an active account and a valid location must be selected on the map. \\ 
 		\hline
@@ -560,9 +561,9 @@
 	\end{table}
 
 	\item{View Places of Interest}
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                             				& The user must have an active account and their current location must be known. \\ 
 		\hline
@@ -582,9 +583,9 @@
 	\end{table}
 
 	\item{Navigate to Location}
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline 
 		Preconditions                                                                                 						& The user must have an active account. The users current location must be known and the must have specified a destination through the search interface. \\ 
 		\hline
@@ -606,9 +607,9 @@
 	\end{table}
 
 	\item{View Pedestrian Traffic}
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions													& Users must all have the NavUP app installed and must be registered in order for them to show up on the heat map. The current user must have selected the option to navigate to a location \\
 		\hline
@@ -631,9 +632,9 @@
 
 	\item{Save Location}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                    										& The user must be logged in to the system.  \\ 
 		\hline
@@ -652,9 +653,9 @@
 
 	\item{View Saved Locations}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                          										& The user must be logged in \\ 
 		\hline
@@ -675,9 +676,9 @@
 
 	\item{View History}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                   										& The user must be logged in \\ 
 		\hline
@@ -698,9 +699,9 @@
 
 	\item{Share Location}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                                                                						& The user must select the "View Current Location" option \\ 
 		\hline
@@ -723,9 +724,9 @@
 
 	\item{View Most Visited Locations}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                  											& The user must be logged in \\ 
 		\hline
@@ -750,9 +751,9 @@
 
 	\item{Create Profile}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       				& The user must not exist on the system \\ 				
 		\hline
@@ -771,9 +772,9 @@
 
 	\item{Login}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                    												& The user must be registered on the system \\ 
 		\hline
@@ -792,9 +793,9 @@
 
 	\item{Manage Profile}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       						& The user must be logged in \\ 				
 		\hline
@@ -819,9 +820,9 @@
 
 	\item{Create Timetable}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       				& The user must be logged in \\ 				
 		\hline
@@ -842,9 +843,9 @@
 
 	\item{Manage Timetable}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       				& The user must be logged in \\ 				
 		\hline
@@ -872,9 +873,9 @@
 
 	\item{View Events}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       				& The user must be logged in \\ 				
 		\hline
@@ -895,9 +896,9 @@
 
 	\item{Save Event}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       				& The user has selected the View Events option \\ 				
 		\hline
@@ -916,9 +917,9 @@
 
 	\item{Delete Event}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       											& None \\ 				
 		\hline
@@ -946,9 +947,9 @@
 
 	\item{Set Goal}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       										& The user must be logged in \\ 				
 		\hline
@@ -969,9 +970,9 @@
 
 	\item{View Leader board}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       										& The user must be logged in \\ 				
 		\hline
@@ -990,9 +991,9 @@
 
 	\item{Challenge a Friend}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       										& The user must be logged in \\ 				
 		\hline
@@ -1022,9 +1023,9 @@
 
 	\item{Manage Users}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering	
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       										& The current user must be an administrator \\ 				
 		\hline
@@ -1053,9 +1054,9 @@
 
 	\item{Manage Locations}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       										& The current user must be an administrator \\ 				
 		\hline
@@ -1080,9 +1081,9 @@
 
 	\item{Manage Events}
 
-	\begin{table}[]
+	\begin{table}[H]
 	\centering
-		\begin{tabular}{ | m{15em} | m{15em}| }
+		\begin{tabular}{ | p{15em} | p{15em}| }
 		\hline
 		Preconditions                                                       										& The current user must be an administrator \\ 				
 		\hline
@@ -1119,10 +1120,7 @@
 	\end{enumerate}
 \end{enumerate}
 \end{center}
-	\begin{figure}[h!]
-		\includegraphics[scale=0.5]{Administrator.jpg}
-		\caption{Administrator Subsystem}	
-	\end{figure} 
+	
  
 	\end{enumerate}
 	
