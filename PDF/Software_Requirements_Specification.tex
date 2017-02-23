@@ -1,10 +1,20 @@
 \documentclass{article}
 \usepackage[margin=2.5cm,left=2cm,includefoot]{geometry}
 \usepackage{enumitem}
- \usepackage{float}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+ \usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
  
- \newlist{FR}{enumerate}{1}
- \setlist[FR]{label=FR-\arabic*:}
+\newlist{FR}{enumerate}{1}
+\setlist[FR]{label=FR-\arabic*:}
 \renewcommand{\labelenumii}{\theenumii}
 \renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
 
@@ -35,10 +45,35 @@
 	NavUP will have a notifications system that will tell the user of events he/she might be interested in. An achievements system will also be in place to award users for walking certain distances or visiting certain locations.  NavUP also hopes to incorporate locations with access for the disabled into its maps for those that are in need of such features. It will have a timetable feature that will allow users to create personalised timetables which the system could then use to help them get where they need to when they need to. The system will work offline but will lose some of its online features such as notifications for user interests. Users will also be able to broadcast their location so that others can see them on their maps.
 	
 	\subsection{Definitions, Acronyms and Abbreviations}
-	
-	\begin{figure}[h!]
-		\includegraphics[scale=1]{Descriptions.PNG}
-	\end{figure}
+\begin{table}[h!]
+\centering
+\caption{Definitions}
+\label{my-label}
+\begin{tabular}{|l|l|}
+\hline
+SRS                & System Requirements Specification                                                     \\ \hline
+CRUD               & Create, Read, Update, Delete                                                          \\ \hline
+GPS                & Global Positioning System                                                             \\ \hline
+NavUP              & Navigation System for UP                                                              \\ \hline
+UP                 & University of Pretoria                                                                \\ \hline
+WiFi               & Wireless Fidelity (Technology for wireless local area networking)                     \\ \hline
+EDGE               & Enhanced Data for GSM Evolution (slow network found in some buildings)                \\ \hline
+RAM                & Random Access Memory                                                                  \\ \hline
+GUI                & Graphical User Interface                                                              \\ \hline
+Interoperability   & The ability of computer systems/software to communicate information effectively       \\ \hline
+Administrator      & User with special permissions in order to manage the system                           \\ \hline
+System             & Composition of databases, application, network and other necessary subsystems         \\ \hline
+Main User          & Users that will be registered to make use of the full service/application             \\ \hline
+Guest User         & Unregistered users who make use of the system for a limited period when needed        \\ \hline
+Location           & A specific place/position                                                             \\ \hline
+Events             & Meetings of importance to specific users                                              \\ \hline
+Heatmap            & Visual representation of traffic congestion using colours that range from cool to hot \\ \hline
+Rewards            & Virtual incentives upon an achievement                                                \\ \hline
+Places of Interest & Locations that a specific user will find meaningful                                   \\ \hline
+Leaderboard        & Ranks users descending order in terms of most achievements                            \\ \hline
+\end{tabular}
+\end{table}
+
 	
 	\subsection{References}
 	\subsection{Overview}
